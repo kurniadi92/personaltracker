@@ -13,9 +13,12 @@
 		4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EE287AEC2300901832 /* SettingStorageTest.swift */; };
 		4AA300F2287AF53400901832 /* WelcomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F1287AF53400901832 /* WelcomePageViewModel.swift */; };
 		4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F3287B035F00901832 /* SwinjectAdapter.swift */; };
+		4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */; };
+		4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */; };
+		4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */; };
 		4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */; };
 		4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */; };
-		4AAF7A04287A5E2A00B9D9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A03287A5E2A00B9D9BC /* ViewController.swift */; };
+		4AAF7A04287A5E2A00B9D9BC /* WelcomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */; };
 		4AAF7A07287A5E2A00B9D9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF7A05287A5E2A00B9D9BC /* Main.storyboard */; };
 		4AAF7A09287A5E2C00B9D9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF7A08287A5E2C00B9D9BC /* Assets.xcassets */; };
 		4AAF7A0C287A5E2C00B9D9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF7A0A287A5E2C00B9D9BC /* LaunchScreen.storyboard */; };
@@ -52,10 +55,13 @@
 		4AA300EE287AEC2300901832 /* SettingStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageTest.swift; sourceTree = "<group>"; };
 		4AA300F1287AF53400901832 /* WelcomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewModel.swift; sourceTree = "<group>"; };
 		4AA300F3287B035F00901832 /* SwinjectAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectAdapter.swift; sourceTree = "<group>"; };
+		4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewModelTest.swift; sourceTree = "<group>"; };
+		4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSignalTestHelper.swift; sourceTree = "<group>"; };
+		4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectViewModel.swift; sourceTree = "<group>"; };
 		4AAF79FC287A5E2A00B9D9BC /* personaltracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personaltracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AAF7A03287A5E2A00B9D9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomPageViewController.swift; sourceTree = "<group>"; };
 		4AAF7A06287A5E2A00B9D9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AAF7A08287A5E2C00B9D9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAF7A0B287A5E2C00B9D9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				4AA300EB287AEBC800901832 /* SwinjectSetup.swift */,
 				4AA300F3287B035F00901832 /* SwinjectAdapter.swift */,
+				4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -126,12 +133,20 @@
 			path = adapter;
 			sourceTree = "<group>";
 		};
-		4AA300F0287AF52200901832 /* viewmodel */ = {
+		4AA300F0287AF52200901832 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4AA300F1287AF53400901832 /* WelcomePageViewModel.swift */,
 			);
-			path = viewmodel;
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		4AA300F7287B04A900901832 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		4AAF79F3287A5E2A00B9D9BC = {
@@ -159,12 +174,12 @@
 		4AAF79FE287A5E2A00B9D9BC /* personaltracker */ = {
 			isa = PBXGroup;
 			children = (
-				4AA300F0287AF52200901832 /* viewmodel */,
+				4AA300F0287AF52200901832 /* viewModel */,
 				4AA300EA287AEB9F00901832 /* di */,
 				4AA300E7287ADA2D00901832 /* adapter */,
 				4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */,
 				4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */,
-				4AAF7A03287A5E2A00B9D9BC /* ViewController.swift */,
+				4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */,
 				4AAF7A05287A5E2A00B9D9BC /* Main.storyboard */,
 				4AAF7A08287A5E2C00B9D9BC /* Assets.xcassets */,
 				4AAF7A0A287A5E2C00B9D9BC /* LaunchScreen.storyboard */,
@@ -176,8 +191,10 @@
 		4AAF7A15287A5E2C00B9D9BC /* personaltrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				4AA300F7287B04A900901832 /* viewModel */,
 				4AA300ED287AEC0F00901832 /* adapter */,
 				4AAF7A16287A5E2C00B9D9BC /* personaltrackerTests.swift */,
+				4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */,
 			);
 			path = personaltrackerTests;
 			sourceTree = "<group>";
@@ -471,11 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAF7A04287A5E2A00B9D9BC /* ViewController.swift in Sources */,
+				4AAF7A04287A5E2A00B9D9BC /* WelcomPageViewController.swift in Sources */,
 				4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
+				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
 				4AA300F2287AF53400901832 /* WelcomePageViewModel.swift in Sources */,
 				4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */,
 			);
@@ -486,7 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */,
+				4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */,
 				4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */,
+				4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,17 @@
+//
+//  SwinjectViewModel.swift
+//  personaltracker
+//
+//  Created by kur niadi  on 10/07/22.
+//
+
+import Foundation
+import SwinjectStoryboard
+
+extension SwinjectStoryboard {
+    class func registerViewModel() {
+        defaultContainer.register(WelcomePageViewModel.self) { r in
+            return WelcomePageViewModelImpl(storage: r.resolve(SettingStorage.self)!)
+        }
+    }
+}

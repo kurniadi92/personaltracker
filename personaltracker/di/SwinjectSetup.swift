@@ -11,7 +11,12 @@ import SwinjectStoryboard
 extension SwinjectStoryboard {
 
     class func setup() {
+        defaultContainer.storyboardInitCompleted(WelcomPageViewController.self) { r, n in
+            n.viewModel = r.resolve(WelcomePageViewModel.self)!
+        }
+        
         registerAdapter()
+        registerViewModel()
     }
     
     class func resolveDefault<Service>(_ service: Service.Type) -> Service? {
