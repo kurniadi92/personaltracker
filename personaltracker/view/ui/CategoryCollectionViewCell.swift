@@ -20,5 +20,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         bgView.layer.borderColor = UIColor.gray.cgColor
         bgView.layer.borderWidth =  0.3
     }
-
+    
+    func setText(text: String)  {
+        categoryTitleLabel.text = text
+    }
+ 
 }

@@ -14,6 +14,7 @@
 		4A038537287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */; };
 		4A03853B287C772000AD5E37 /* ImagePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */; };
 		4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03853C287C794900AD5E37 /* AddDataViewController.swift */; };
+		4A038540287C823000AD5E37 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03853F287C823000AD5E37 /* UIImage+Extension.swift */; };
 		4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300E8287AE6C400901832 /* SettingStorage.swift */; };
 		4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EB287AEBC800901832 /* SwinjectSetup.swift */; };
 		4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EE287AEC2300901832 /* SettingStorageTest.swift */; };
@@ -68,6 +69,7 @@
 		4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerHelper.swift; sourceTree = "<group>"; };
 		4A03853C287C794900AD5E37 /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
+		4A03853F287C823000AD5E37 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4AA300E8287AE6C400901832 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 		4AA300EB287AEBC800901832 /* SwinjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectSetup.swift; sourceTree = "<group>"; };
 		4AA300EE287AEC2300901832 /* SettingStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageTest.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 				4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		4A03853E287C821C00AD5E37 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A03853F287C823000AD5E37 /* UIImage+Extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		4AA300E7287ADA2D00901832 /* adapter */ = {
@@ -211,6 +221,7 @@
 		4AAF79FE287A5E2A00B9D9BC /* personaltracker */ = {
 			isa = PBXGroup;
 			children = (
+				4A03853E287C821C00AD5E37 /* extension */,
 				4AC53B68287BBF36003703D7 /* interactor */,
 				4AC53B5D287BA421003703D7 /* view */,
 				4AA300F0287AF52200901832 /* viewModel */,
@@ -575,6 +586,7 @@
 				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
+				4A038540287C823000AD5E37 /* UIImage+Extension.swift in Sources */,
 				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
 				4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */,
 				4AA300F2287AF53400901832 /* WelcomePageViewModel.swift in Sources */,
