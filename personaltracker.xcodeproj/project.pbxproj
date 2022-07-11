@@ -12,6 +12,8 @@
 		4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A038531287C571700AD5E37 /* SettingInteractorMock.swift */; };
 		4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */; };
 		4A038537287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */; };
+		4A03853B287C772000AD5E37 /* ImagePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */; };
+		4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03853C287C794900AD5E37 /* AddDataViewController.swift */; };
 		4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300E8287AE6C400901832 /* SettingStorage.swift */; };
 		4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EB287AEBC800901832 /* SwinjectSetup.swift */; };
 		4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EE287AEC2300901832 /* SettingStorageTest.swift */; };
@@ -64,6 +66,8 @@
 		4A038531287C571700AD5E37 /* SettingInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorMock.swift; sourceTree = "<group>"; };
 		4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerHelper.swift; sourceTree = "<group>"; };
+		4A03853C287C794900AD5E37 /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
 		4AA300E8287AE6C400901832 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 		4AA300EB287AEBC800901832 /* SwinjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectSetup.swift; sourceTree = "<group>"; };
 		4AA300EE287AEC2300901832 /* SettingStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageTest.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA300E8287AE6C400901832 /* SettingStorage.swift */,
+				4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				4A038533287C6D1F00AD5E37 /* ui */,
 				4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */,
 				4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */,
+				4A03853C287C794900AD5E37 /* AddDataViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */,
 				4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */,
 				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
+				4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */,
 				4AAAB143287BF237008E0A5D /* SettingPageViewController.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
 				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
@@ -572,6 +579,7 @@
 				4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */,
 				4AA300F2287AF53400901832 /* WelcomePageViewModel.swift in Sources */,
 				4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */,
+				4A03853B287C772000AD5E37 /* ImagePickerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

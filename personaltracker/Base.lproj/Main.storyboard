@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="538" y="800"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Data View Controller-->
         <scene sceneID="2oO-DA-BcN">
             <objects>
-                <viewController id="SCm-G3-Lff" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddDataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SCm-G3-Lff" customClass="AddDataViewController" customModule="personaltracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tim-lh-Mc8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,6 +238,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.50457919373804205" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="IqH-7C-8KY" firstAttribute="centerX" secondItem="EMn-cf-omf" secondAttribute="centerX" id="C5g-Gf-fop"/>
                                     <constraint firstItem="IqH-7C-8KY" firstAttribute="centerY" secondItem="EMn-cf-omf" secondAttribute="centerY" id="EPj-KS-P7Z"/>
@@ -246,6 +247,9 @@
                                     <constraint firstItem="EMn-cf-omf" firstAttribute="top" secondItem="siZ-lm-giw" secondAttribute="top" id="Zws-wi-oh4"/>
                                     <constraint firstAttribute="trailing" secondItem="EMn-cf-omf" secondAttribute="trailing" id="grv-ub-nJ5"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dMc-Y1-Dor" appends="YES" id="iWp-CR-u8K"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0iN-yA-HRt"/>
@@ -275,8 +279,17 @@
                             <constraint firstItem="FIv-lk-cb0" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="vei-HE-kCa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryCollectionView" destination="Hkh-PX-1Mu" id="AYc-OC-NCi"/>
+                        <outlet property="imageView" destination="EMn-cf-omf" id="clw-rg-afw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1se-gb-EOI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dMc-Y1-Dor">
+                    <connections>
+                        <action selector="imageTap:" destination="SCm-G3-Lff" id="9tQ-oU-hkl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="537.68115942028987" y="1471.875"/>
         </scene>
