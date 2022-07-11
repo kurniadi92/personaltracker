@@ -7,29 +7,77 @@
 
 import XCTest
 
+@testable import personaltracker
+
 class SettingPageViewModelTest: XCTestCase {
 
+    private var viewModel: SettingPageViewModel!
+    private var testHelper: RxSignalTestHelper<SettingPageViewModelEvent>!
+    private var settingInteractor: SettingInteractor!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        testHelper = RxSignalTestHelper()
+        settingInteractor = SettingInteractorMock()
+        viewModel = SettingPageViewModelImpl(setting: settingInteractor)
+        
+        testHelper.observeValue(observable: viewModel.event)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testViewLoad_shouldUpdateCurrencyAndResetDay() {
+        viewModel.viewLoad()
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values,
+                           [
+                            .updateCurrency(currency: "default"),
+                            .updateResetDay(resetDay: "Every 999")
+                           ]
+            )
+        }
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testOnCurrencyTapped_shouldTriggerEventShowCurrency() {
+        viewModel.onCurrenncyTapped()
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values, [.showCurrencySelection(items: ["A", "B", "C"])])
+        }
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testOnDayResetSelected_shouldTriggerEventShow() {
+        viewModel.onDayResetTapped()
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values, [.showDayResetInput(current: 999)])
+        }
+    }
+    
+    func testOnCurrencySelected_shouldUpdateSetting()  {
+        viewModel.onCurrencySelected(currency: "selected")
+        wait {
+            XCTAssertEqual(self.testHelper.values, [.updateCurrency(currency: "selected")])
+        }
+    }
+    
+    func testOnResetDaySelected_isInvalid_shouldTriggerErrorMessage() {
+        viewModel.onResetDaySelected(day: 0)
+        viewModel.onResetDaySelected(day: -1)
+        viewModel.onResetDaySelected(day: 32)
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values, [
+                .showError(message: "Day should between 1 until 31"),
+                .showError(message: "Day should between 1 until 31"),
+                .showError(message: "Day should between 1 until 31")
+            ])
         }
     }
 
+    func testOnResetDaySelected_valid_shouldUpdateSetting() {
+        viewModel.onResetDaySelected(day: 12)
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values, [.updateResetDay(resetDay: "Every 12")])
+        }
+    }
 }

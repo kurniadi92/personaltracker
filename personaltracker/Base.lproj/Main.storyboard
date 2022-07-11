@@ -69,10 +69,171 @@
             </objects>
             <point key="canvasLocation" x="20" y="79"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="mPY-sX-Xdw">
+            <objects>
+                <viewController id="9s7-Ce-bie" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ORk-6H-zlB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCb-lG-xki">
+                                <rect key="frame" x="24" y="68" width="210" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9dW-AN-a2U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oCb-lG-xki" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="8Ak-G1-uBc"/>
+                            <constraint firstItem="oCb-lG-xki" firstAttribute="top" secondItem="9dW-AN-a2U" secondAttribute="top" constant="24" id="oHw-hx-oKT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="dollarsign.circle.fill" catalog="system" id="WYM-4s-a7n"/>
+                    <navigationItem key="navigationItem" id="MJe-py-Mln"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TP2-B6-AHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="800"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="OkI-8d-hYp">
+            <objects>
+                <viewController storyboardIdentifier="SettingPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KYr-s3-MGw" customClass="SettingPageViewController" customModule="personaltracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qW9-nG-Qwe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGI-yJ-MTN">
+                                <rect key="frame" x="24" y="68" width="122.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qRH-k1-qMd">
+                                <rect key="frame" x="24" y="154" width="366" height="108"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8b-cj-pP4">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-o6-xDq">
+                                                <rect key="frame" x="0.0" y="0.0" width="266" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-SL-F75">
+                                                <rect key="frame" x="266" y="0.0" width="100" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="6D2-0g-TMs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Lao-N6-EKo"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EL7-oX-MTH" appends="YES" id="fGA-ND-dBg"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-eB-WV0">
+                                        <rect key="frame" x="0.0" y="60" width="366" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqC-Kx-rGS">
+                                                <rect key="frame" x="0.0" y="0.0" width="266" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVj-NH-T0b">
+                                                <rect key="frame" x="266" y="0.0" width="100" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="77n-QI-8TH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="IZo-IL-yoD"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="v3T-nE-h9P" appends="YES" id="jEH-xU-w5o"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="bzt-74-ddC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aO7-qE-zIr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qRH-k1-qMd" firstAttribute="leading" secondItem="aO7-qE-zIr" secondAttribute="leading" constant="24" id="IxT-cv-Dzj"/>
+                            <constraint firstItem="qRH-k1-qMd" firstAttribute="top" secondItem="pGI-yJ-MTN" secondAttribute="bottom" constant="38" id="ZgT-oZ-1OC"/>
+                            <constraint firstItem="pGI-yJ-MTN" firstAttribute="leading" secondItem="aO7-qE-zIr" secondAttribute="leading" constant="24" id="dg1-CC-DvU"/>
+                            <constraint firstItem="pGI-yJ-MTN" firstAttribute="top" secondItem="aO7-qE-zIr" secondAttribute="top" constant="24" id="eNQ-v8-b7h"/>
+                            <constraint firstItem="aO7-qE-zIr" firstAttribute="trailing" secondItem="qRH-k1-qMd" secondAttribute="trailing" constant="24" id="t2v-FC-haD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gearshape.fill" catalog="system" id="S3c-Ne-ssr"/>
+                    <navigationItem key="navigationItem" id="WbL-KX-9OH"/>
+                    <connections>
+                        <outlet property="currencyLabel" destination="H0g-SL-F75" id="fcH-8n-e5g"/>
+                        <outlet property="resetDayLabel" destination="qVj-NH-T0b" id="nGe-Cw-fhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhw-Hf-pyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EL7-oX-MTH" userLabel="CurrencyTap">
+                    <connections>
+                        <action selector="currencyTap:" destination="KYr-s3-MGw" id="Mk6-WN-5lZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="v3T-nE-h9P" userLabel="DayResetTap">
+                    <connections>
+                        <action selector="dayResetTap:" destination="KYr-s3-MGw" id="30g-0n-hjT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="799.55357142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y5s-Em-FHQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="enl-sA-3tX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PKQ-CL-9Pf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9s7-Ce-bie" kind="relationship" relationship="viewControllers" id="G8V-l8-663"/>
+                        <segue destination="KYr-s3-MGw" kind="relationship" relationship="viewControllers" id="rfj-mh-YHh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wph-Eo-9sQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="78"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

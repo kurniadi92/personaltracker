@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A3229C665C8BA8769726AB2 /* Pods_personaltrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2D9CDFC109E06A95266085 /* Pods_personaltrackerTests.framework */; };
 		4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03852F287C554F00AD5E37 /* SwinjectInteractor.swift */; };
+		4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A038531287C571700AD5E37 /* SettingInteractorMock.swift */; };
 		4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300E8287AE6C400901832 /* SettingStorage.swift */; };
 		4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EB287AEBC800901832 /* SwinjectSetup.swift */; };
 		4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EE287AEC2300901832 /* SettingStorageTest.swift */; };
@@ -17,6 +18,8 @@
 		4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */; };
 		4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */; };
 		4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */; };
+		4AAAB141287BEA73008E0A5D /* SettingPageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAAB140287BEA73008E0A5D /* SettingPageViewModelTest.swift */; };
+		4AAAB143287BF237008E0A5D /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */; };
 		4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */; };
 		4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */; };
 		4AAF7A04287A5E2A00B9D9BC /* WelcomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */; };
@@ -26,6 +29,7 @@
 		4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A16287A5E2C00B9D9BC /* personaltrackerTests.swift */; };
 		4AAF7A21287A5E2C00B9D9BC /* personaltrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A20287A5E2C00B9D9BC /* personaltrackerUITests.swift */; };
 		4AAF7A23287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A22287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift */; };
+		4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */; };
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
 		4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */; };
@@ -55,6 +59,7 @@
 		2AE9129CFECAC42322B32931 /* Pods_personaltracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personaltracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416F6E1E0EE0AC542F23C1D6 /* Pods-personaltracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personaltracker.release.xcconfig"; path = "Target Support Files/Pods-personaltracker/Pods-personaltracker.release.xcconfig"; sourceTree = "<group>"; };
 		4A03852F287C554F00AD5E37 /* SwinjectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectInteractor.swift; sourceTree = "<group>"; };
+		4A038531287C571700AD5E37 /* SettingInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorMock.swift; sourceTree = "<group>"; };
 		4AA300E8287AE6C400901832 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 		4AA300EB287AEBC800901832 /* SwinjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectSetup.swift; sourceTree = "<group>"; };
 		4AA300EE287AEC2300901832 /* SettingStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageTest.swift; sourceTree = "<group>"; };
@@ -63,6 +68,8 @@
 		4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewModelTest.swift; sourceTree = "<group>"; };
 		4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSignalTestHelper.swift; sourceTree = "<group>"; };
 		4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectViewModel.swift; sourceTree = "<group>"; };
+		4AAAB140287BEA73008E0A5D /* SettingPageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModelTest.swift; sourceTree = "<group>"; };
+		4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
 		4AAF79FC287A5E2A00B9D9BC /* personaltracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personaltracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		4AAF7A1C287A5E2C00B9D9BC /* personaltrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = personaltrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF7A20287A5E2C00B9D9BC /* personaltrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaltrackerUITests.swift; sourceTree = "<group>"; };
 		4AAF7A22287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaltrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
 		4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorImpl.swift; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA300F1287AF53400901832 /* WelcomePageViewModel.swift */,
+				4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */,
+				4AAAB140287BEA73008E0A5D /* SettingPageViewModelTest.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -184,12 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				4AC53B68287BBF36003703D7 /* interactor */,
+				4AC53B5D287BA421003703D7 /* view */,
 				4AA300F0287AF52200901832 /* viewModel */,
 				4AA300EA287AEB9F00901832 /* di */,
 				4AA300E7287ADA2D00901832 /* adapter */,
 				4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */,
 				4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */,
-				4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */,
 				4AAF7A05287A5E2A00B9D9BC /* Main.storyboard */,
 				4AAF7A08287A5E2C00B9D9BC /* Assets.xcassets */,
 				4AAF7A0A287A5E2C00B9D9BC /* LaunchScreen.storyboard */,
@@ -220,6 +230,15 @@
 			path = personaltrackerUITests;
 			sourceTree = "<group>";
 		};
+		4AC53B5D287BA421003703D7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */,
+				4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4AC53B60287BB6F1003703D7 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */,
+				4A038531287C571700AD5E37 /* SettingInteractorMock.swift */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -527,6 +547,8 @@
 				4AAF7A04287A5E2A00B9D9BC /* WelcomPageViewController.swift in Sources */,
 				4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */,
 				4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */,
+				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
+				4AAAB143287BF237008E0A5D /* SettingPageViewController.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
@@ -542,7 +564,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */,
+				4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */,
 				4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */,
+				4AAAB141287BEA73008E0A5D /* SettingPageViewModelTest.swift in Sources */,
 				4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */,
 				4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */,
 				4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */,
