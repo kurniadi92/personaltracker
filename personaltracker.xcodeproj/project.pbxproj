@@ -10,6 +10,8 @@
 		1A3229C665C8BA8769726AB2 /* Pods_personaltrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2D9CDFC109E06A95266085 /* Pods_personaltrackerTests.framework */; };
 		4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03852F287C554F00AD5E37 /* SwinjectInteractor.swift */; };
 		4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A038531287C571700AD5E37 /* SettingInteractorMock.swift */; };
+		4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */; };
+		4A038537287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */; };
 		4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300E8287AE6C400901832 /* SettingStorage.swift */; };
 		4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EB287AEBC800901832 /* SwinjectSetup.swift */; };
 		4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA300EE287AEC2300901832 /* SettingStorageTest.swift */; };
@@ -60,6 +62,8 @@
 		416F6E1E0EE0AC542F23C1D6 /* Pods-personaltracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personaltracker.release.xcconfig"; path = "Target Support Files/Pods-personaltracker/Pods-personaltracker.release.xcconfig"; sourceTree = "<group>"; };
 		4A03852F287C554F00AD5E37 /* SwinjectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectInteractor.swift; sourceTree = "<group>"; };
 		4A038531287C571700AD5E37 /* SettingInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorMock.swift; sourceTree = "<group>"; };
+		4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		4AA300E8287AE6C400901832 /* SettingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorage.swift; sourceTree = "<group>"; };
 		4AA300EB287AEBC800901832 /* SwinjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectSetup.swift; sourceTree = "<group>"; };
 		4AA300EE287AEC2300901832 /* SettingStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageTest.swift; sourceTree = "<group>"; };
@@ -123,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A038533287C6D1F00AD5E37 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */,
+				4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		4AA300E7287ADA2D00901832 /* adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +246,7 @@
 		4AC53B5D287BA421003703D7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4A038533287C6D1F00AD5E37 /* ui */,
 				4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */,
 				4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */,
 			);
@@ -397,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A038537287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib in Resources */,
 				4AAF7A0C287A5E2C00B9D9BC /* LaunchScreen.storyboard in Resources */,
 				4AAF7A09287A5E2C00B9D9BC /* Assets.xcassets in Resources */,
 				4AAF7A07287A5E2A00B9D9BC /* Main.storyboard in Resources */,
@@ -550,6 +565,7 @@
 				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
 				4AAAB143287BF237008E0A5D /* SettingPageViewController.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
+				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
 				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
