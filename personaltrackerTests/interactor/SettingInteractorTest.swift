@@ -29,7 +29,7 @@ class SettingInteractorTest: XCTestCase {
         XCTAssertEqual("USD", interactor.getSelectedCurrency())
     }
     
-    func testIfGetResetDayNil_shouldReturn1() {
+    func testIfGetResetDay0_shouldReturn1() {
         let interactor =  SettingInteractorImpl(storage: storageMock)
         XCTAssertEqual(1, interactor.getSelectedResetDay())
     }

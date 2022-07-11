@@ -14,7 +14,7 @@ protocol SettingStorage {
     
     func getName() -> String?
     func getCurrency() -> String?
-    func getResetDay() -> Int?
+    func getResetDay() -> Int
 }
 
 class SettingStorageImpl: SettingStorage {
@@ -49,7 +49,7 @@ class SettingStorageImpl: SettingStorage {
         return storage.string(forKey: CURRENCY_CONST)
     }
     
-    func getResetDay() -> Int? {
+    func getResetDay() -> Int {
         return storage.integer(forKey: RESET_CONST)
     }
 }

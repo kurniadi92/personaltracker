@@ -12,7 +12,7 @@ import Foundation
 class SettingStorageMock: SettingStorage {
     private var name: String?
     private var currency: String?
-    private var day: Int?
+    private var day: Int = 0
 
     func saveCurrency(currency: String) {
         self.currency = currency
@@ -26,7 +26,7 @@ class SettingStorageMock: SettingStorage {
         return currency
     }
     
-    func getResetDay() -> Int? {
+    func getResetDay() -> Int {
         return day
     }
         

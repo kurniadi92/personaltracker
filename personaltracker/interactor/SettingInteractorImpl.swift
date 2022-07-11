@@ -33,7 +33,8 @@ class SettingInteractorImpl: SettingInteractor {
     }
     
     func getSelectedResetDay() -> Int {
-        return storage.getResetDay() ?? 1
+        let validDay =  (storage.getResetDay() > 0) ? storage.getResetDay() : 1
+        return validDay
     }
     
     func setCurrency(currency: String) {
