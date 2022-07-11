@@ -16,6 +16,7 @@ extension SwinjectStoryboard {
         }
         
         registerAdapter()
+        registerInteractor()
         registerViewModel()
     }
     

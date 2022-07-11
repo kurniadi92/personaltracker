@@ -31,7 +31,7 @@ class WelcomePageViewModelTest: XCTestCase {
     }
     
     func testViewLoad_IfAlreadyHaveName_ShouldGoToMainPage() {
-        let storageMock = SettingNameStorageMock()
+        let storageMock = SettingStorageMock()
         storageMock.saveName(name: "random")
         
         viewModel = WelcomePageViewModelImpl(storage: storageMock)
@@ -50,7 +50,7 @@ class WelcomePageViewModelTest: XCTestCase {
     }
     
     func testViewLoadIfAlready_Not_HaveNameShould_NOT_GoToMainPage() {
-        viewModel = WelcomePageViewModelImpl(storage: SettingNameStorageMock())
+        viewModel = WelcomePageViewModelImpl(storage: SettingStorageMock())
                 
         testHelper.observeValue(observable: viewModel.event)
         
@@ -62,7 +62,7 @@ class WelcomePageViewModelTest: XCTestCase {
     }
     
     func testOnTextChange_WhenNotJustSpaceOrWhiteSpaceOrEmpty_ShouldReturnEanbleGoTrue() {
-        viewModel = WelcomePageViewModelImpl(storage: SettingNameStorageMock())
+        viewModel = WelcomePageViewModelImpl(storage: SettingStorageMock())
                 
         testHelper.observeValue(observable: viewModel.event)
         
@@ -74,7 +74,7 @@ class WelcomePageViewModelTest: XCTestCase {
     }
 
     func testOnTextChange_WhenJustSpaceOrWhiteSpaceOrEmpty_ShouldReturnEanbleGoFalse() {
-        viewModel = WelcomePageViewModelImpl(storage: SettingNameStorageMock())
+        viewModel = WelcomePageViewModelImpl(storage: SettingStorageMock())
                 
         testHelper.observeValue(observable: viewModel.event)
         
@@ -87,7 +87,7 @@ class WelcomePageViewModelTest: XCTestCase {
     }
     
     func testGoTapped_shouldSaveName_theGoToMain() {
-        let storageMock = SettingNameStorageMock()
+        let storageMock = SettingStorageMock()
         viewModel = WelcomePageViewModelImpl(storage: storageMock)
                 
         testHelper.observeValue(observable: viewModel.event)
@@ -99,27 +99,4 @@ class WelcomePageViewModelTest: XCTestCase {
             XCTAssertEqual(storageMock.getName(), "random")
         }
     }
-}
-
-
-extension SettingStorage {
-    func saveName(name: String) { }
-    func saveCurrency(currency: String) { }
-    func saveResetDay(day: Int) { }
-    func getName() -> String? { return nil }
-    func getCurrency() -> String? { return nil }
-    func getResetDay() -> Int? { return nil }
-}
-
-class SettingNameStorageMock: SettingStorage {
-    private var name: String?
-    
-    func saveName(name: String) {
-        self.name = name
-    }
-    
-    func getName() -> String? {
-        return name
-    }
-
 }
