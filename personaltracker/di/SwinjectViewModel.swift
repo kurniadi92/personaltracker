@@ -13,5 +13,9 @@ extension SwinjectStoryboard {
         defaultContainer.register(WelcomePageViewModel.self) { r in
             return WelcomePageViewModelImpl(storage: r.resolve(SettingStorage.self)!)
         }
+        
+        defaultContainer.register(SettingPageViewModel.self) { r in
+            return SettingPageViewModelImpl(setting: r.resolve(SettingInteractor.self)!)
+        }
     }
 }
