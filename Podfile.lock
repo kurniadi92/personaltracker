@@ -2,15 +2,12 @@ PODS:
   - Charts (3.4.0):
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
-  - ChartsRealm (3.4.0):
-    - Charts (~> 3.4.0)
-    - RealmSwift (~> 3.18.0)
   - Kingfisher (7.0.0)
-  - Realm (3.18.0):
-    - Realm/Headers (= 3.18.0)
-  - Realm/Headers (3.18.0)
-  - RealmSwift (3.18.0):
-    - Realm (= 3.18.0)
+  - Realm (10.25.0):
+    - Realm/Headers (= 10.25.0)
+  - Realm/Headers (10.25.0)
+  - RealmSwift (10.25.0):
+    - Realm (= 10.25.0)
   - RxBlocking (6.5.0):
     - RxSwift (= 6.5.0)
   - RxCocoa (6.5.0):
@@ -27,9 +24,8 @@ PODS:
 
 DEPENDENCIES:
   - Charts (= 3.4.0)
-  - ChartsRealm (= 3.4.0)
   - Kingfisher (= 7.0)
-  - RealmSwift (= 3.18.0)
+  - RealmSwift (= 10.25)
   - RxBlocking (= 6.5.0)
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
@@ -40,7 +36,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Charts
-    - ChartsRealm
     - Kingfisher
     - Realm
     - RealmSwift
@@ -54,10 +49,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
-  ChartsRealm: 2ae8bf478211a94b3b6dd20738db0b9b132eb66b
   Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
-  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
-  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
+  Realm: 22a82aaa0e73f3483e3a6df32549c4c5cd34aa63
+  RealmSwift: c2a635212400923edd3f828b8a37d55d3eb31863
   RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
@@ -66,6 +60,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 240ce371396da09a4c43c72ee5c148108500e184
 
-PODFILE CHECKSUM: bc8d7a2ebedbfea188c6a6ea262287da2984e024
+PODFILE CHECKSUM: ee00f3aa6a18f49f1c7381b2d458d945645839b1
 
 COCOAPODS: 1.11.3
