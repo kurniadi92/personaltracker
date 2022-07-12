@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import RxSwift
 
 class AddDataViewController: UIViewController {
     
+    @IBOutlet var amountTextField: UITextField!
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var addButton: UIButton!
     @IBOutlet var categoryCollectionView: UICollectionView!
     private let imagePickerHelper = ImagePickerHelper()
     @IBOutlet var imageView: UIImageView!
     
-    var okeh = ["namaster","kara", "kokomi", "lokersome", "campuni", "kakao"]
+    var viewModel: AddRecordViewModel!
+    var type: RecordType = .expense
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,43 +31,80 @@ class AddDataViewController: UIViewController {
         categoryCollectionView.dataSource =  self
         categoryCollectionView.collectionViewLayout = LeftAlignedLayout()
         categoryCollectionView.reloadData()
-        // Do any additional setup after loading the view.
+        
+        setupSignal()
+        
+        viewModel.viewLoad(type: type)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onViewTap))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func onViewTap()  {
+        view.endEditing(true)
+    }
+    
+    @IBAction func addTap(_ sender: Any) {
+        viewModel.save(title: titleTextField.text, amount: Int(amountTextField.text ?? "") ?? 0)
+    }
+    
+    private func setupSignal() {
+        viewModel.event.emit { [weak self] event in
+            guard let `self` = self else { return }
+            switch(event) {
+            case .setExpenseAppeareance:
+                self.addButton.backgroundColor = UIColor.red
+                self.addButton.setTitle("Add Expense", for: .normal)
+            case .setIncomeAppeareance:
+                self.addButton.backgroundColor = UIColor.green
+                self.addButton.setTitle("Add Income", for: .normal)
+            case .updateCategory:
+                self.categoryCollectionView.reloadData()
+            case .showSuccess:
+                self.dismiss(animated: true)
+            case .showError(let message):
+                self.showError(message: message)
+            }
+        }.disposed(by: disposeBag)
     }
     
     @IBAction func imageTap(_ sender: Any) {
         imagePickerHelper.getImage(root: self) { [weak self] validImage in
-            let url = validImage.saveToDocuments(filename: Date().timeIntervalSince1970.description)
-            self?.imageView.image = try! UIImage(data: Data(contentsOf: url!))
+            guard let url = validImage.saveToDocuments(filename: Int(Date().timeIntervalSince1970).description) else {
+                return
+            }
+            self?.imageView.image = try! UIImage(data: Data(contentsOf: url))
+            self?.viewModel.setImage(url: url)
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    @IBAction func dismissTap(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 
 extension AddDataViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: okeh[indexPath.row].count * 5 + 24, height: 42)
+        return viewModel.itemSize(index: indexPath.row)
+    }
+}
+
+extension AddDataViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectCategory(index: indexPath.row)
     }
 }
 
 extension AddDataViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return okeh.count
+        return viewModel.categoryCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else { return  UICollectionViewCell() }
         
-        cell.setText(text: okeh[indexPath.row])
+        cell.setText(param: viewModel.category(index: indexPath.row))
         
         return cell
     }

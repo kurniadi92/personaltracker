@@ -17,5 +17,9 @@ extension SwinjectStoryboard {
         defaultContainer.register(SettingPageViewModel.self) { r in
             return SettingPageViewModelImpl(setting: r.resolve(SettingInteractor.self)!)
         }
+        
+        defaultContainer.register(AddRecordViewModel.self) { r in
+            return AddRecordViewModelImpl(addRecordInteractor: r.resolve(AddRecordInteractor.self)!)
+        }
     }
 }

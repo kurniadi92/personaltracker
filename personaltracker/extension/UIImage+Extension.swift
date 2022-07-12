@@ -24,5 +24,17 @@ extension UIImage {
             return nil
         }
     }
+    
+    func fetchImage(with imageName: String) -> UIImage? {
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        if let path = paths.first {
+            let imageURL = URL(fileURLWithPath: path).appendingPathComponent(imageName)
+            let data = try! Data(contentsOf: imageURL)
+            if let image = UIImage(data: data) {
+                return image
+            }
+        }
+        return nil
+    }
 
 }

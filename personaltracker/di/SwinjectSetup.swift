@@ -19,6 +19,10 @@ extension SwinjectStoryboard {
             n.viewModel = r.resolve(SettingPageViewModel.self)!
         }
         
+        defaultContainer.storyboardInitCompleted(AddDataViewController.self) { r, n in
+            n.viewModel = r.resolve(AddRecordViewModel.self)!
+        }
+        
         registerAdapter()
         registerInteractor()
         registerViewModel()

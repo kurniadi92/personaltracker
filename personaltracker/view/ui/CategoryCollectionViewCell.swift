@@ -21,8 +21,15 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         bgView.layer.borderWidth =  0.3
     }
     
-    func setText(text: String)  {
-        categoryTitleLabel.text = text
+    func setText(param: CategoryViewParam)  {
+        categoryTitleLabel.text = param.name
+        if param.isSelected {
+            bgView.backgroundColor = UIColor.darkGray
+            categoryTitleLabel.textColor = UIColor.white
+        } else {
+            bgView.backgroundColor = UIColor.clear
+            categoryTitleLabel.textColor = UIColor.black
+        }
     }
  
 }
