@@ -34,6 +34,11 @@
 		4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A16287A5E2C00B9D9BC /* personaltrackerTests.swift */; };
 		4AAF7A21287A5E2C00B9D9BC /* personaltrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A20287A5E2C00B9D9BC /* personaltrackerUITests.swift */; };
 		4AAF7A23287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF7A22287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift */; };
+		4AB100DA287CF002009E3E63 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100D9287CF002009E3E63 /* Record.swift */; };
+		4AB100DC287CF23B009E3E63 /* RecordStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DB287CF23B009E3E63 /* RecordStorage.swift */; };
+		4AB100DE287CF5D1009E3E63 /* RecordRaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */; };
+		4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DF287CF61B009E3E63 /* RealmCreator.swift */; };
+		4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */; };
 		4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */; };
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
@@ -93,6 +98,11 @@
 		4AAF7A1C287A5E2C00B9D9BC /* personaltrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = personaltrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF7A20287A5E2C00B9D9BC /* personaltrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaltrackerUITests.swift; sourceTree = "<group>"; };
 		4AAF7A22287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaltrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AB100D9287CF002009E3E63 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		4AB100DB287CF23B009E3E63 /* RecordStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorage.swift; sourceTree = "<group>"; };
+		4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRaw.swift; sourceTree = "<group>"; };
+		4AB100DF287CF61B009E3E63 /* RealmCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCreator.swift; sourceTree = "<group>"; };
+		4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageTest.swift; sourceTree = "<group>"; };
 		4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
@@ -155,6 +165,8 @@
 			children = (
 				4AA300E8287AE6C400901832 /* SettingStorage.swift */,
 				4A03853A287C772000AD5E37 /* ImagePickerHelper.swift */,
+				4AB100DB287CF23B009E3E63 /* RecordStorage.swift */,
+				4AB100DF287CF61B009E3E63 /* RealmCreator.swift */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
@@ -174,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA300EE287AEC2300901832 /* SettingStorageTest.swift */,
+				4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 		4AAF79FE287A5E2A00B9D9BC /* personaltracker */ = {
 			isa = PBXGroup;
 			children = (
+				4AB100D8287CEFEA009E3E63 /* entity */,
 				4A03853E287C821C00AD5E37 /* extension */,
 				4AC53B68287BBF36003703D7 /* interactor */,
 				4AC53B5D287BA421003703D7 /* view */,
@@ -257,6 +271,15 @@
 				4AAF7A22287A5E2C00B9D9BC /* personaltrackerUITestsLaunchTests.swift */,
 			);
 			path = personaltrackerUITests;
+			sourceTree = "<group>";
+		};
+		4AB100D8287CEFEA009E3E63 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				4AB100D9287CF002009E3E63 /* Record.swift */,
+				4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 		4AC53B5D287BA421003703D7 /* view */ = {
@@ -586,11 +609,15 @@
 				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
+				4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */,
 				4A038540287C823000AD5E37 /* UIImage+Extension.swift in Sources */,
 				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
 				4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */,
+				4AB100DE287CF5D1009E3E63 /* RecordRaw.swift in Sources */,
 				4AA300F2287AF53400901832 /* WelcomePageViewModel.swift in Sources */,
+				4AB100DC287CF23B009E3E63 /* RecordStorage.swift in Sources */,
 				4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */,
+				4AB100DA287CF002009E3E63 /* Record.swift in Sources */,
 				4A03853B287C772000AD5E37 /* ImagePickerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */,
+				4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */,
 				4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */,
 				4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */,
 				4AAAB141287BEA73008E0A5D /* SettingPageViewModelTest.swift in Sources */,

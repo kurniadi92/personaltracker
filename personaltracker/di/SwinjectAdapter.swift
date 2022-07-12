@@ -13,5 +13,9 @@ extension SwinjectStoryboard {
         defaultContainer.register(SettingStorage.self) { _ in
             return SettingStorageImpl(storage: UserDefaults.standard)
         }
+        
+        defaultContainer.register(RecordStorage.self) { _ in
+            return RecordStorageImpl(realm: RealmCreator.create())
+        }
     }
 }
