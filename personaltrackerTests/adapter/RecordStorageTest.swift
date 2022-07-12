@@ -27,7 +27,7 @@ class RecordStorageTest: XCTestCase {
             category: "category",
             type: "type",
             amount: 100,
-            imageLocation: "location"
+            imageId: "location"
         )
          
         let record = try! storage.save(data: recordRaw).toBlocking().first()
@@ -45,7 +45,7 @@ class RecordStorageTest: XCTestCase {
             category: "category",
             type: "type",
             amount: 100,
-            imageLocation: "location"
+            imageId: "id"
         )
         let record = try! storage.save(data: recordRaw).toBlocking().first()
 

@@ -23,7 +23,7 @@ class RecordStorageMock: RecordStorage {
     }
     
     func save(data: RecordRaw) -> Single<Record> {
-        record = Record(uid: "uuid", title: data.title, category: data.category, type: data.type, amount: data.amount, imageLocation: data.imageLocation, createdAt: 0)
+        record = Record(uid: "uuid", title: data.title, category: data.category, type: data.type, amount: data.amount, imageId: data.imageId, createdAt: 0)
         
         return Single.just(record)
     }

@@ -13,5 +13,5 @@ struct RecordRaw {
     let category: String
     let type: String
     let amount: Int
-    let imageLocation: String
+    let imageId: String
 }

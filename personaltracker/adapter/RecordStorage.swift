@@ -62,7 +62,7 @@ class RecordStorageImpl: RecordStorage {
                                         category: data.category,
                                         type: data.type,
                                         amount: data.amount,
-                                        imageLocation: data.imageLocation,
+                                        imageId: data.imageId,
                                         createdAt: Int(Date().timeIntervalSince1970))
                     realm.add(object, update: .all)
                     
