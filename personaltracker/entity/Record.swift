@@ -15,6 +15,7 @@ class Record: Object {
     @objc dynamic var category: String = ""
     @objc dynamic var type: String = ""
     @objc dynamic var amount: Int = 0
+    @objc dynamic var createdAt: Int = 0
     @objc dynamic var imageLocation: String = ""
    
     override class func primaryKey() -> String? {
@@ -27,7 +28,8 @@ class Record: Object {
         category: String,
         type: String,
         amount: Int,
-        imageLocation: String
+        imageLocation: String,
+        createdAt: Int
     ) {
         self.init()
         
@@ -37,6 +39,6 @@ class Record: Object {
         self.type = type
         self.amount = amount
         self.imageLocation = imageLocation
+        self.createdAt = createdAt
     }
-    
 }

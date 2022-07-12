@@ -13,5 +13,9 @@ extension SwinjectStoryboard {
         defaultContainer.register(SettingInteractor.self) { r in
             return SettingInteractorImpl(storage: r.resolve(SettingStorage.self)!)
         }
+        
+        defaultContainer.register(AddRecordInteractor.self) { r in
+            return AddRecordInteractorImpl(recordStorage: r.resolve(RecordStorage.self)!)
+        }
     }
 }

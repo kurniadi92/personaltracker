@@ -43,6 +43,9 @@
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
 		4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */; };
+		4AF72898287D3F950063EA53 /* AddRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */; };
+		4AF7289A287D439C0063EA53 /* AddRecordInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */; };
+		4AF7289C287D46C20063EA53 /* RecordStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */; };
 		78C52FA4CB7802AF72EA65A4 /* Pods_personaltracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE9129CFECAC42322B32931 /* Pods_personaltracker.framework */; };
 		E7B0B4F1D6AF3290BB641BED /* Pods_personaltracker_personaltrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97184BF81E0D7B37DD9B0D /* Pods_personaltracker_personaltrackerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +110,9 @@
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
 		4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorImpl.swift; sourceTree = "<group>"; };
+		4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordInteractor.swift; sourceTree = "<group>"; };
+		4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordInteractorTest.swift; sourceTree = "<group>"; };
+		4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageMock.swift; sourceTree = "<group>"; };
 		640EA9AB7B3D1ABDBEB7349E /* Pods-personaltracker-personaltrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personaltracker-personaltrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-personaltracker-personaltrackerUITests/Pods-personaltracker-personaltrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6A7BCB60BAEC992730A29028 /* Pods-personaltrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personaltrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-personaltrackerTests/Pods-personaltrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		75190D30452C5DF98D25978E /* Pods-personaltracker-personaltrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personaltracker-personaltrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-personaltracker-personaltrackerUITests/Pods-personaltracker-personaltrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */,
+				4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -306,6 +313,7 @@
 			children = (
 				4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */,
 				4A038531287C571700AD5E37 /* SettingInteractorMock.swift */,
+				4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */,
+				4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -603,6 +612,7 @@
 				4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */,
 				4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */,
 				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
+				4AF72898287D3F950063EA53 /* AddRecordInteractor.swift in Sources */,
 				4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */,
 				4AAAB143287BF237008E0A5D /* SettingPageViewController.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
@@ -627,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA300EF287AEC2300901832 /* SettingStorageTest.swift in Sources */,
+				4AF7289A287D439C0063EA53 /* AddRecordInteractorTest.swift in Sources */,
 				4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */,
 				4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */,
 				4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */,
@@ -634,6 +645,7 @@
 				4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */,
 				4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */,
 				4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */,
+				4AF7289C287D46C20063EA53 /* RecordStorageMock.swift in Sources */,
 				4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
