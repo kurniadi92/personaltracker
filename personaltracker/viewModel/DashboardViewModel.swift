@@ -205,7 +205,7 @@ class DashboardViewModelImpl: DashboardViewModel {
                                            formattedDate: dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(record.createdAt))))
             }.sorted { $0.createdAt > $1.createdAt }
             
-            let grouping = Dictionary(grouping: periodeRecord.filter { $0.type == "expense" }, by: { $0.category })
+            let grouping = Dictionary(grouping: periodeRecord.filter { $0.type == RecordType.expense.rawValue }, by: { $0.category })
                 .map { key, value in
                     return PieChartViewParam(totalExpense: value.map { Float($0.amount) }.reduce(0, +), category: key)
             }
@@ -224,7 +224,7 @@ class DashboardViewModelImpl: DashboardViewModel {
     }
     
     private func createBarChartViewParam(record: [Record]) -> [BarChartViewParam] {
-        let barChatRawData = Dictionary(grouping: record.filter { $0.type == "expense" }, by: { Date(timeIntervalSince1970: TimeInterval($0.createdAt)).get(.day) })
+        let barChatRawData = Dictionary(grouping: record.filter { $0.type == RecordType.expense.rawValue }, by: { Date(timeIntervalSince1970: TimeInterval($0.createdAt)).get(.day) })
             .map { key, value -> BarChartViewParam in
                 return BarChartViewParam(day: key, amount: value.map { $0.amount }.reduce(0, +))
         }

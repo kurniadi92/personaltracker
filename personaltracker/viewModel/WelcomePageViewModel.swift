@@ -51,6 +51,7 @@ class WelcomePageViewModelImpl: WelcomePageViewModel {
     
     func goTapped(name: String) {
         storage.saveName(name: name)
+        storage.saveResetDay(day: 1)
         _event.onNext(.goToMainPage)
     }
 }

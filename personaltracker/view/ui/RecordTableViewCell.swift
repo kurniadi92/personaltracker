@@ -21,7 +21,7 @@ class RecordTableViewCell: UITableViewCell {
     }
 
     func set(item: RecordCellViewParam) {
-        let typeRecordColor = item.type == "expense" ? UIColor.red : UIColor.green
+        let typeRecordColor = item.type == RecordType.expense.rawValue ? UIColor.red : UIColor.green
         typeView.backgroundColor = typeRecordColor
         
         dateLabel.text = item.formattedDate

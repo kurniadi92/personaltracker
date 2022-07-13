@@ -358,6 +358,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-DT-ZuH">
                                 <rect key="frame" x="24" y="92" width="41" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.5" id="Si5-rs-aFz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -372,6 +375,9 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-fu-b6M">
                                 <rect key="frame" x="24" y="166.5" width="75.5" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.5" id="uAX-R9-oRY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -384,21 +390,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-l1-URI">
-                                <rect key="frame" x="24" y="790" width="366" height="48"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Noe-ky-qpw"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add  Expense">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addTap:" destination="SCm-G3-Lff" eventType="touchUpInside" id="jpU-G7-XKN"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-fF-IGf">
+                                <rect key="frame" x="24" y="802" width="366" height="48"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-l1-URI">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="48"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Noe-ky-qpw"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtoTap:" destination="SCm-G3-Lff" eventType="touchUpInside" id="B23-wN-naQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHP-Hj-hZ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="hJa-QI-VsS"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add  Expense">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTap:" destination="SCm-G3-Lff" eventType="touchUpInside" id="xRV-hW-vKe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-PX-1Mu">
                                 <rect key="frame" x="24" y="247" width="366" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -423,13 +449,13 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-lm-giw">
-                                <rect key="frame" x="24" y="385" width="366" height="387"/>
+                                <rect key="frame" x="24" y="385" width="366" height="405"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-cf-omf">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="387"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="405"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-7C-8KY">
-                                        <rect key="frame" x="151" y="162" width="64" height="62"/>
+                                        <rect key="frame" x="151" y="171" width="64" height="62"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="Je3-VI-eV1"/>
@@ -457,23 +483,23 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="FZU-hw-hwz" secondAttribute="trailing" constant="24" id="0C0-zE-Kxn"/>
+                            <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="hYC-fF-IGf" secondAttribute="trailing" constant="24" id="4I3-kN-EKo"/>
                             <constraint firstItem="Tt2-DT-ZuH" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="6q8-Uj-wzI"/>
-                            <constraint firstItem="0iN-yA-HRt" firstAttribute="bottom" secondItem="AXm-l1-URI" secondAttribute="bottom" constant="24" id="Drj-gs-hJ3"/>
+                            <constraint firstItem="hYC-fF-IGf" firstAttribute="top" secondItem="siZ-lm-giw" secondAttribute="bottom" constant="12" id="978-zs-Yae"/>
                             <constraint firstItem="Tt2-DT-ZuH" firstAttribute="top" secondItem="0iN-yA-HRt" secondAttribute="top" constant="48" id="FWD-uz-TbP"/>
                             <constraint firstItem="sXu-fu-b6M" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="Fs7-Bh-bCK"/>
                             <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="FIv-lk-cb0" secondAttribute="trailing" constant="24" id="Hj9-SD-sEw"/>
+                            <constraint firstItem="hYC-fF-IGf" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="I2R-J7-sZW"/>
                             <constraint firstItem="sXu-fu-b6M" firstAttribute="top" secondItem="FZU-hw-hwz" secondAttribute="bottom" constant="12" id="O2a-nK-Iqs"/>
-                            <constraint firstItem="AXm-l1-URI" firstAttribute="top" secondItem="siZ-lm-giw" secondAttribute="bottom" constant="18" id="R6X-ve-75Q"/>
                             <constraint firstItem="siZ-lm-giw" firstAttribute="top" secondItem="Hkh-PX-1Mu" secondAttribute="bottom" constant="18" id="UW2-ts-vdV"/>
                             <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="tGb-3V-Yjp" secondAttribute="trailing" constant="24" id="VRX-cn-5K7"/>
                             <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="siZ-lm-giw" secondAttribute="trailing" constant="24" id="Y9W-i5-zeG"/>
+                            <constraint firstItem="0iN-yA-HRt" firstAttribute="bottom" secondItem="hYC-fF-IGf" secondAttribute="bottom" constant="12" id="ZOF-Y1-wZP"/>
                             <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="Hkh-PX-1Mu" secondAttribute="trailing" constant="24" id="ad2-8s-UAe"/>
                             <constraint firstItem="Hkh-PX-1Mu" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="bJ7-o9-lYi"/>
                             <constraint firstItem="siZ-lm-giw" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="cRI-Ub-Dz1"/>
                             <constraint firstItem="FZU-hw-hwz" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="cRP-rv-GXO"/>
-                            <constraint firstItem="AXm-l1-URI" firstAttribute="leading" secondItem="0iN-yA-HRt" secondAttribute="leading" constant="24" id="dRJ-nH-v0V"/>
                             <constraint firstItem="FZU-hw-hwz" firstAttribute="top" secondItem="Tt2-DT-ZuH" secondAttribute="bottom" constant="6" id="df0-0r-Id1"/>
-                            <constraint firstItem="0iN-yA-HRt" firstAttribute="trailing" secondItem="AXm-l1-URI" secondAttribute="trailing" constant="24" id="gsk-mV-7xY"/>
                             <constraint firstItem="tGb-3V-Yjp" firstAttribute="top" secondItem="0iN-yA-HRt" secondAttribute="top" constant="12" id="hsi-7E-RSy"/>
                             <constraint firstItem="Hkh-PX-1Mu" firstAttribute="top" secondItem="FIv-lk-cb0" secondAttribute="bottom" constant="18" id="jaz-GD-piy"/>
                             <constraint firstItem="FIv-lk-cb0" firstAttribute="top" secondItem="sXu-fu-b6M" secondAttribute="bottom" constant="6" id="oOG-PR-1UE"/>
@@ -481,9 +507,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="AXm-l1-URI" id="LJ3-kk-utb"/>
+                        <outlet property="addButton" destination="RHP-Hj-hZ2" id="22a-4Z-7Gi"/>
                         <outlet property="amountTextField" destination="FIv-lk-cb0" id="b4H-zY-AXm"/>
                         <outlet property="categoryCollectionView" destination="Hkh-PX-1Mu" id="AYc-OC-NCi"/>
+                        <outlet property="deleteButton" destination="AXm-l1-URI" id="ad4-1z-Ndi"/>
                         <outlet property="imageView" destination="EMn-cf-omf" id="clw-rg-afw"/>
                         <outlet property="titleTextField" destination="FZU-hw-hwz" id="jTI-48-Dob"/>
                     </connections>
@@ -495,7 +522,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="537.68115942028987" y="1471.875"/>
+            <point key="canvasLocation" x="1150.7246376811595" y="1462.5"/>
         </scene>
         <!--Setting-->
         <scene sceneID="OkI-8d-hYp">
