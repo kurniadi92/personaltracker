@@ -21,19 +21,18 @@ class WelcomPageViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     var viewModel: WelcomePageViewModel!
+    var onDismiss: () -> Void = { }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
         setupSignal()
-        
-        viewModel.viewLoad()        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        viewModel.viewDidAppear()
     }
     
     private func setupSignal() {
@@ -53,11 +52,8 @@ class WelcomPageViewController: UIViewController {
         viewModel.event.emit { [unowned self] event in
             switch(event) {
             case .goToMainPage:
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController
-                UIApplication.shared.mainWindow?.rootViewController = vc
-                
-                UIApplication.shared.mainWindow?.makeKeyAndVisible()
+                onDismiss()
+                dismiss(animated: false)
                 
                 break
             case .enableGo(let isEnabled):

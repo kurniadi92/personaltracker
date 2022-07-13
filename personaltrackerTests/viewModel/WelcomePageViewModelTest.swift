@@ -27,7 +27,7 @@ class WelcomePageViewModelTest: XCTestCase {
                 
         testHelper.observeValue(observable: viewModel.event)
         
-        viewModel.viewLoad()
+        viewModel.viewDidAppear()
         
         wait {
             XCTAssertEqual(
@@ -43,7 +43,7 @@ class WelcomePageViewModelTest: XCTestCase {
                 
         testHelper.observeValue(observable: viewModel.event)
         
-        viewModel.viewLoad()
+        viewModel.viewDidAppear()
         
         wait {
             XCTAssertEqual(self.testHelper.values, [.enableGo(isEnabled: false)])

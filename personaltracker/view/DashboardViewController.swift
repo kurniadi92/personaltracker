@@ -44,6 +44,24 @@ class DashboardViewController: UIViewController {
         setupSignal()
         
         viewModel.viewLoad()
+        
+        rx.sentMessage(#selector(UIViewController.viewDidAppear(_:)))
+            .take(1)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] _  in
+                self?.showWelcomePage()
+            }.disposed(by: disposeBag)
+
+    }
+    
+    private func showWelcomePage() {
+        guard let vc = UIStoryboard.createViewController(vc: WelcomPageViewController.self) else { return }
+        vc.onDismiss = { [weak self] in
+            self?.viewModel.viewLoad()
+        }
+        vc.modalPresentationStyle = .overFullScreen
+        
+        present(vc, animated: false)
     }
     
     private func setupSignal() {

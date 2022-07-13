@@ -16,7 +16,7 @@ enum WelcomePageViewModelEvent: Equatable {
 
 protocol WelcomePageViewModel {
     
-    func viewLoad()
+    func viewDidAppear()
     func goTapped(name: String)
     func onTextChange(text: String)
     
@@ -36,7 +36,7 @@ class WelcomePageViewModelImpl: WelcomePageViewModel {
         self.storage = storage
     }
     
-    func viewLoad() {
+    func viewDidAppear() {
         if storage.getName() != nil {
             _event.onNext(.goToMainPage)
         } else {
