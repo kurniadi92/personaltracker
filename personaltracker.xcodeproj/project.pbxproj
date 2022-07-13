@@ -109,7 +109,7 @@
 		4AA5EC4E287B2B1100534289 /* SwinjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectViewModel.swift; sourceTree = "<group>"; };
 		4AAAB140287BEA73008E0A5D /* SettingPageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModelTest.swift; sourceTree = "<group>"; };
 		4AAAB142287BF237008E0A5D /* SettingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
-		4AAF79FC287A5E2A00B9D9BC /* personaltracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personaltracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAF79FC287A5E2A00B9D9BC /* Personal Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF79FF287A5E2A00B9D9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF7A01287A5E2A00B9D9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4AAF7A03287A5E2A00B9D9BC /* WelcomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomPageViewController.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		4AAF79FD287A5E2A00B9D9BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4AAF79FC287A5E2A00B9D9BC /* personaltracker.app */,
+				4AAF79FC287A5E2A00B9D9BC /* Personal Tracker.app */,
 				4AAF7A12287A5E2C00B9D9BC /* personaltrackerTests.xctest */,
 				4AAF7A1C287A5E2C00B9D9BC /* personaltrackerUITests.xctest */,
 			);
@@ -432,7 +432,7 @@
 			);
 			name = personaltracker;
 			productName = personaltracker;
-			productReference = 4AAF79FC287A5E2A00B9D9BC /* personaltracker.app */;
+			productReference = 4AAF79FC287A5E2A00B9D9BC /* Personal Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4AAF7A11287A5E2C00B9D9BC /* personaltrackerTests */ = {
@@ -915,7 +915,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mettaverse.personaltracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Personal Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -945,7 +945,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mettaverse.personaltracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Personal Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
