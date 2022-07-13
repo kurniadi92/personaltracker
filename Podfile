@@ -12,7 +12,7 @@ target 'personaltracker' do
     pod 'Swinject', '2.7.1'
     pod 'SwinjectStoryboard', '2.2.2'
     pod 'RealmSwift', '10.25'
-    pod 'Charts', '3.4.0'
+    pod 'Charts', '4.0.3'
 
   target 'personaltrackerTests' do
     inherit! :search_paths
