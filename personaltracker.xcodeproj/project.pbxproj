@@ -39,6 +39,12 @@
 		4AB100DE287CF5D1009E3E63 /* RecordRaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */; };
 		4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DF287CF61B009E3E63 /* RealmCreator.swift */; };
 		4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */; };
+		4AC04D61287E382900E6822F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D5F287E382900E6822F /* RecordTableViewCell.swift */; };
+		4AC04D62287E382900E6822F /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC04D60287E382900E6822F /* RecordTableViewCell.xib */; };
+		4AC04D64287E3DB900E6822F /* BarChatView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D63287E3DB900E6822F /* BarChatView+Extension.swift */; };
+		4AC04D66287E3EFD00E6822F /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D65287E3EFD00E6822F /* DayAxisValueFormatter.swift */; };
+		4AC04D68287E3F4B00E6822F /* PieChartView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D67287E3F4B00E6822F /* PieChartView+Extension.swift */; };
+		4AC04D6A287E404400E6822F /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */; };
 		4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */; };
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
@@ -112,6 +118,12 @@
 		4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRaw.swift; sourceTree = "<group>"; };
 		4AB100DF287CF61B009E3E63 /* RealmCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCreator.swift; sourceTree = "<group>"; };
 		4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageTest.swift; sourceTree = "<group>"; };
+		4AC04D5F287E382900E6822F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		4AC04D60287E382900E6822F /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		4AC04D63287E3DB900E6822F /* BarChatView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarChatView+Extension.swift"; sourceTree = "<group>"; };
+		4AC04D65287E3EFD00E6822F /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		4AC04D67287E3F4B00E6822F /* PieChartView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PieChartView+Extension.swift"; sourceTree = "<group>"; };
+		4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
@@ -166,6 +178,8 @@
 			children = (
 				4A038534287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift */,
 				4A038535287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib */,
+				4AC04D5F287E382900E6822F /* RecordTableViewCell.swift */,
+				4AC04D60287E382900E6822F /* RecordTableViewCell.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -174,6 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				4A03853F287C823000AD5E37 /* UIImage+Extension.swift */,
+				4AC04D63287E3DB900E6822F /* BarChatView+Extension.swift */,
+				4AC04D65287E3EFD00E6822F /* DayAxisValueFormatter.swift */,
+				4AC04D67287E3F4B00E6822F /* PieChartView+Extension.swift */,
+				4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -481,6 +499,7 @@
 				4A038537287C6D3A00AD5E37 /* CategoryCollectionViewCell.xib in Resources */,
 				4AAF7A0C287A5E2C00B9D9BC /* LaunchScreen.storyboard in Resources */,
 				4AAF7A09287A5E2C00B9D9BC /* Assets.xcassets in Resources */,
+				4AC04D62287E382900E6822F /* RecordTableViewCell.xib in Resources */,
 				4AAF7A07287A5E2A00B9D9BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,8 +647,11 @@
 			files = (
 				4AAF7A04287A5E2A00B9D9BC /* WelcomPageViewController.swift in Sources */,
 				4A038530287C554F00AD5E37 /* SwinjectInteractor.swift in Sources */,
+				4AC04D66287E3EFD00E6822F /* DayAxisValueFormatter.swift in Sources */,
 				4AAF7A00287A5E2A00B9D9BC /* AppDelegate.swift in Sources */,
 				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
+				4AC04D61287E382900E6822F /* RecordTableViewCell.swift in Sources */,
+				4AC04D64287E3DB900E6822F /* BarChatView+Extension.swift in Sources */,
 				4AF728A2287D93D40063EA53 /* CategoryViewParam.swift in Sources */,
 				4AF72898287D3F950063EA53 /* AddRecordInteractor.swift in Sources */,
 				4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */,
@@ -637,11 +659,13 @@
 				4AF7289E287D90530063EA53 /* AddRecordViewModel.swift in Sources */,
 				4AA300E9287AE6C400901832 /* SettingStorage.swift in Sources */,
 				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
+				4AC04D6A287E404400E6822F /* UIStoryboard+Extension.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
 				4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */,
 				4A038540287C823000AD5E37 /* UIImage+Extension.swift in Sources */,
 				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
+				4AC04D68287E3F4B00E6822F /* PieChartView+Extension.swift in Sources */,
 				4AF728A0287D92170063EA53 /* RecordViewParam.swift in Sources */,
 				4AF728A4287DA0240063EA53 /* DashboardViewController.swift in Sources */,
 				4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */,
