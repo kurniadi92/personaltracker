@@ -52,7 +52,7 @@ class SettingPageViewController: UIViewController {
     }
     
     private func showDayResetInput(current: Int) {
-        let alert = UIAlertController(title: "Attention", message: "Please input any day between 1 unt1l 31", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Attention", message: "Please input any day between 1 unt1l 28", preferredStyle: .alert)
 
         alert.addTextField { (textField) in
             textField.text = current.description
