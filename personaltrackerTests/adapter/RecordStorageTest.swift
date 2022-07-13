@@ -53,4 +53,36 @@ class RecordStorageTest: XCTestCase {
 
         XCTAssertEqual([record!], expectedRecord)
     }
+    
+    func testCreateAndGetAllByRange() {
+        let storage = RecordStorageImpl(realm: self.realm)
+        let recordRaw = RecordRaw(
+            uid: "uuid",
+            title: "mock",
+            category: "category",
+            type: "type",
+            amount: 100,
+            imageId: "id"
+        )
+        
+        let recordRaw2 = RecordRaw(
+            uid: "uuid-2",
+            title: "mock-2",
+            category: "category-2",
+            type: "type-2",
+            amount: 100,
+            imageId: "id-2"
+        )
+        
+        let record1 = try! storage.save(data: recordRaw).toBlocking().first()
+        Thread.sleep(forTimeInterval: 1)
+        let record2 = try! storage.save(data: recordRaw2).toBlocking().first()
+        Thread.sleep(forTimeInterval: 1)
+        
+        let expectedRecord = try! storage
+            .getByRange(start: Int(Date().timeIntervalSince1970 - (10 * 100)),
+                        end: Int(Date().timeIntervalSince1970)).toBlocking().first()
+
+        XCTAssertEqual([record1!, record2!], expectedRecord)
+    }
 }

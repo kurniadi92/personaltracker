@@ -13,6 +13,7 @@ protocol RecordStorage {
     func getAll() -> Single<[Record]>
     func get(uid: String) -> Single<Record>
     func save(data: RecordRaw) -> Single<Record>
+    func getByRange(start: Int, end: Int) -> Single<[Record]>
 }
 
 class RecordStorageImpl: RecordStorage {
@@ -46,6 +47,17 @@ class RecordStorageImpl: RecordStorage {
             } else {
                 return .error(NSError(domain: "No record found", code: 1))
             }
+        }
+    }
+    
+    func getByRange(start: Int, end: Int) -> Single<[Record]> {
+        return Single<[Record]>.deferred { [weak self] in
+            guard let `self` = self, let realm = self.realm() else {
+                return .error(NSError(domain: "Failed to initialize realm", code: 0))
+            }
+            let records = realm.objects(Record.self).filter("createdAt >= \(start) AND createdAt <= \(end)")
+            
+            return .just(Array(records))
         }
     }
     

@@ -18,6 +18,10 @@ class RecordStorageMock: RecordStorage {
         return Single.just([])
     }
     
+    func getByRange(start: Int, end: Int) -> Single<[Record]> {
+        return Single.just([])
+    }
+    
     func get(uid: String) -> Single<Record> {
         return Single.just(record)
     }
