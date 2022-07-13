@@ -66,9 +66,9 @@ class SettingPageViewModelTest: XCTestCase {
         
         wait {
             XCTAssertEqual(self.testHelper.values, [
-                .showError(message: "Day should between 1 until 31"),
-                .showError(message: "Day should between 1 until 31"),
-                .showError(message: "Day should between 1 until 31")
+                .showError(message: "Day should between 1 until 28. We still a MVP :)"),
+                .showError(message: "Day should between 1 until 28. We still a MVP :)"),
+                .showError(message: "Day should between 1 until 28. We still a MVP :)")
             ])
         }
     }

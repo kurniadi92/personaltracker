@@ -45,6 +45,8 @@
 		4AC04D66287E3EFD00E6822F /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D65287E3EFD00E6822F /* DayAxisValueFormatter.swift */; };
 		4AC04D68287E3F4B00E6822F /* PieChartView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D67287E3F4B00E6822F /* PieChartView+Extension.swift */; };
 		4AC04D6A287E404400E6822F /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */; };
+		4AC04D6C287E657500E6822F /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D6B287E657500E6822F /* DashboardInteractor.swift */; };
+		4AC04D6E287E731D00E6822F /* DashboardInteracorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D6D287E731D00E6822F /* DashboardInteracorTest.swift */; };
 		4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */; };
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
@@ -124,6 +126,8 @@
 		4AC04D65287E3EFD00E6822F /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		4AC04D67287E3F4B00E6822F /* PieChartView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PieChartView+Extension.swift"; sourceTree = "<group>"; };
 		4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		4AC04D6B287E657500E6822F /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		4AC04D6D287E731D00E6822F /* DashboardInteracorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteracorTest.swift; sourceTree = "<group>"; };
 		4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 			children = (
 				4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */,
 				4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */,
+				4AC04D6D287E731D00E6822F /* DashboardInteracorTest.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			children = (
 				4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */,
 				4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */,
+				4AC04D6B287E657500E6822F /* DashboardInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				4AB100DC287CF23B009E3E63 /* RecordStorage.swift in Sources */,
 				4AA300EC287AEBC800901832 /* SwinjectSetup.swift in Sources */,
 				4AB100DA287CF002009E3E63 /* Record.swift in Sources */,
+				4AC04D6C287E657500E6822F /* DashboardInteractor.swift in Sources */,
 				4A03853B287C772000AD5E37 /* ImagePickerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +701,7 @@
 				4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */,
 				4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */,
 				4AF7289C287D46C20063EA53 /* RecordStorageMock.swift in Sources */,
+				4AC04D6E287E731D00E6822F /* DashboardInteracorTest.swift in Sources */,
 				4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

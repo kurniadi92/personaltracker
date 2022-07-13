@@ -63,11 +63,11 @@ class SettingPageViewModelImpl: SettingPageViewModel {
     }
     
     func onResetDaySelected(day: Int) {
-        if day > 0 && day <= 31 {
+        if day > 0 && day <= 28 {
             setting.setResetDay(day: day)
             _event.onNext(.updateResetDay(resetDay: resetDayWord))
         } else {
-            _event.onNext(.showError(message: "Day should between 1 until 31"))
+            _event.onNext(.showError(message: "Day should between 1 until 28. We still a MVP :)"))
         }
     }
 }
