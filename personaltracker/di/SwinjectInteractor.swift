@@ -18,8 +18,8 @@ extension SwinjectStoryboard {
             return AddRecordInteractorImpl(recordStorage: r.resolve(RecordStorage.self)!)
         }
         
-        defaultContainer.register(DashboardInteracor.self) { r in
-            return DashboardInteracorImpl(
+        defaultContainer.register(DashboardInteractor.self) { r in
+            return DashboardInteractorImpl(
                 recordStorage: r.resolve(RecordStorage.self)!,
                 settings: r.resolve(SettingStorage.self)!, currentDate: { return Date() }
             )

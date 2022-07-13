@@ -9,16 +9,10 @@ import Foundation
 import Charts
 
 extension BarChartView {
-    func setup(day: [Int]) {
+    func setup() {
         chartDescription.enabled = false
         
         isUserInteractionEnabled = false
-        let xAxis = xAxis
-        xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 10)
-        xAxis.granularity = 1
-        xAxis.labelCount = 30
-        xAxis.valueFormatter = DayAxisValueFormatter(day: day)
 
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.minimumFractionDigits = 0
@@ -53,9 +47,16 @@ extension BarChartView {
         l.xEntrySpace = 4
     }
     
-    func setDataBar(source: [Int]) {        
+    func setDataBar(source: [BarChartViewParam]) {
+        let xAxis = xAxis
+        xAxis.labelPosition = .bottom
+        xAxis.labelFont = .systemFont(ofSize: 10)
+        xAxis.granularity = 1
+        xAxis.labelCount = source.count
+        xAxis.valueFormatter = DayAxisValueFormatter(day: source.map { $0.day })
+        
         let yVals = (0..<source.count).map { (i) -> BarChartDataEntry in
-            return BarChartDataEntry(x: Double(source[i]), y: Double.random(in: 0..<10))
+            return BarChartDataEntry(x: Double(source[i].day), y: Double(source[i].amount))
         }
         
         var set1: BarChartDataSet! = nil

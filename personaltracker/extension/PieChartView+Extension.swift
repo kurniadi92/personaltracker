@@ -8,15 +8,7 @@
 import Foundation
 import Charts
 
-let parties = ["Party A", "Party B", "Party C", "Party D", "Party E", "Party F",
-               "Party G", "Party H", "Party I", "Party J", "Party K", "Party L",
-               "Party M", "Party N", "Party O", "Party P", "Party Q", "Party R",
-               "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
-               "Party Y", "Party Z"]
-
 extension PieChartView {
-    
-    
     func setup() {
         highlightPerTapEnabled = true
         
@@ -36,12 +28,12 @@ extension PieChartView {
         animate(xAxisDuration: 1.4, easingOption: .easeOutBack)
     }
     
-    func setDataCount(date: [Int]) {
-        let entries = (0..<date.count).map { (i) -> PieChartDataEntry in
-            let total = date.reduce(0, +)
-            let value:Double = (Double(date[i]) / Double(total)) * 100
+    func setDataCount(dataRaw: [PieChartViewParam]) {
+        let entries = (0..<dataRaw.count).map { (i) -> PieChartDataEntry in
+            let total = dataRaw.map{ $0.totalExpense }.reduce(0, +)
+            let value:Double = (Double(dataRaw[i].totalExpense) / Double(total)) * 100
             return PieChartDataEntry(value: value,
-                                     label: parties[i],
+                                     label: dataRaw[i].category,
                                      icon: nil)
         }
         

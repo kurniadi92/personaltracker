@@ -171,6 +171,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sortByDateTap:" destination="9s7-Ce-bie" eventType="touchUpInside" id="5TS-rv-aVk"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-67-c6Y">
                                         <rect key="frame" x="64" y="0.0" width="2" height="42"/>
@@ -187,6 +190,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sortByNameTap:" destination="9s7-Ce-bie" eventType="touchUpInside" id="MD0-7C-uYU"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T84-HQ-1Ob">
                                         <rect key="frame" x="164" y="0.0" width="2" height="42"/>
@@ -206,6 +212,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sortByCategoryTap:" destination="9s7-Ce-bie" eventType="touchUpInside" id="kTn-K5-CeR"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQr-mh-uTT">
                                         <rect key="frame" x="266" y="0.0" width="2" height="42"/>
@@ -222,6 +231,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sortByAmountTap:" destination="9s7-Ce-bie" eventType="touchUpInside" id="GIl-mS-H7g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -249,7 +261,22 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calendarTap:" destination="9s7-Ce-bie" eventType="touchUpInside" id="k1U-Yf-eKd"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 - Aug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po3-Mk-P1g">
+                                <rect key="frame" x="264.5" y="56" width="64.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 - Sep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-ua-zZJ">
+                                <rect key="frame" x="264.5" y="83.5" width="64.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9dW-AN-a2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -257,31 +284,43 @@
                             <constraint firstItem="3R7-jy-r86" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="1cb-mF-87e"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="RW0-48-Gfm" secondAttribute="trailing" constant="24" id="2Lk-7x-j7r"/>
                             <constraint firstItem="eAj-Ks-yXB" firstAttribute="top" secondItem="RW0-48-Gfm" secondAttribute="bottom" constant="12" id="2aR-uE-bbv"/>
+                            <constraint firstItem="po3-Mk-P1g" firstAttribute="top" secondItem="41D-iG-ewe" secondAttribute="top" id="6de-Aa-ZSH"/>
                             <constraint firstItem="Kij-nV-a12" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="74W-ZF-Cgr"/>
                             <constraint firstItem="RW0-48-Gfm" firstAttribute="top" secondItem="3R7-jy-r86" secondAttribute="bottom" constant="6" id="7Ny-wm-0Pu"/>
                             <constraint firstItem="oCb-lG-xki" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="8Ak-G1-uBc"/>
                             <constraint firstItem="3R7-jy-r86" firstAttribute="top" secondItem="Kij-nV-a12" secondAttribute="bottom" constant="6" id="8KZ-xw-vvV"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="41D-iG-ewe" secondAttribute="trailing" constant="24" id="A7N-qc-4xH"/>
                             <constraint firstItem="Kij-nV-a12" firstAttribute="top" secondItem="PMa-SP-OYs" secondAttribute="bottom" constant="12" id="DeN-bp-mNi"/>
+                            <constraint firstItem="FCp-ua-zZJ" firstAttribute="bottom" secondItem="41D-iG-ewe" secondAttribute="bottom" id="QrT-pN-amt"/>
                             <constraint firstItem="eAj-Ks-yXB" firstAttribute="bottom" secondItem="9dW-AN-a2U" secondAttribute="bottom" constant="-12" id="TAf-kJ-iC2"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="PMa-SP-OYs" secondAttribute="trailing" constant="24" id="Uy5-cp-mzt"/>
                             <constraint firstItem="41D-iG-ewe" firstAttribute="top" secondItem="9dW-AN-a2U" secondAttribute="top" constant="12" id="Ymy-bc-jd1"/>
+                            <constraint firstItem="po3-Mk-P1g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oCb-lG-xki" secondAttribute="trailing" constant="24" id="awu-ut-q8n"/>
                             <constraint firstItem="PMa-SP-OYs" firstAttribute="top" secondItem="oCb-lG-xki" secondAttribute="bottom" constant="12" id="b83-fC-Pnf"/>
                             <constraint firstItem="eAj-Ks-yXB" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="c63-eN-gvu"/>
+                            <constraint firstItem="41D-iG-ewe" firstAttribute="leading" secondItem="FCp-ua-zZJ" secondAttribute="trailing" constant="6" id="dph-sR-ax6"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="Kij-nV-a12" secondAttribute="trailing" constant="24" id="gCG-Ln-fsd"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="eAj-Ks-yXB" secondAttribute="trailing" constant="24" id="hol-eb-knp"/>
                             <constraint firstItem="9dW-AN-a2U" firstAttribute="trailing" secondItem="3R7-jy-r86" secondAttribute="trailing" constant="24" id="hsq-P3-yTJ"/>
                             <constraint firstItem="RW0-48-Gfm" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="iQc-oy-IjE"/>
                             <constraint firstItem="PMa-SP-OYs" firstAttribute="leading" secondItem="9dW-AN-a2U" secondAttribute="leading" constant="24" id="lqk-kY-yQf"/>
                             <constraint firstItem="oCb-lG-xki" firstAttribute="top" secondItem="9dW-AN-a2U" secondAttribute="top" constant="12" id="oHw-hx-oKT"/>
+                            <constraint firstItem="41D-iG-ewe" firstAttribute="leading" secondItem="po3-Mk-P1g" secondAttribute="trailing" constant="6" id="snC-ud-uMV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="dollarsign.circle.fill" catalog="system" id="WYM-4s-a7n"/>
                     <navigationItem key="navigationItem" id="MJe-py-Mln"/>
                     <connections>
+                        <outlet property="amountButton" destination="IjV-ay-A4g" id="ndy-ou-9hP"/>
                         <outlet property="barChatView" destination="4bx-vv-J5h" id="shg-rY-nxP"/>
+                        <outlet property="categoryButton" destination="0Pa-ne-284" id="MyB-mB-YjB"/>
+                        <outlet property="dateButton" destination="Y6T-s1-5Fj" id="ujM-jp-dej"/>
+                        <outlet property="endLabel" destination="FCp-ua-zZJ" id="keP-yH-6mu"/>
+                        <outlet property="greetingLabel" destination="oCb-lG-xki" id="xI4-Eq-opo"/>
+                        <outlet property="nameButton" destination="OBx-9v-haH" id="usX-Bl-D02"/>
                         <outlet property="pieChartView" destination="Qyh-bh-PMh" id="lNf-1c-ya9"/>
                         <outlet property="recordTableView" destination="RW0-48-Gfm" id="OAn-x6-wim"/>
+                        <outlet property="startLabel" destination="po3-Mk-P1g" id="FVV-we-3PF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TP2-B6-AHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

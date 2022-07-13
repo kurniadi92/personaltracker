@@ -21,5 +21,11 @@ extension SwinjectStoryboard {
         defaultContainer.register(AddRecordViewModel.self) { r in
             return AddRecordViewModelImpl(addRecordInteractor: r.resolve(AddRecordInteractor.self)!)
         }
+        
+        defaultContainer.register(DashboardViewModel.self) { r in
+            return DashboardViewModelImpl(
+                dashboardInteractor: r.resolve(DashboardInteractor.self)!,
+                currentDate: { return Date() })
+        }
     }
 }

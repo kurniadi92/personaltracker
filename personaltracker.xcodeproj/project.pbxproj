@@ -39,6 +39,7 @@
 		4AB100DE287CF5D1009E3E63 /* RecordRaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */; };
 		4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100DF287CF61B009E3E63 /* RealmCreator.swift */; };
 		4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */; };
+		4AB661C0287F41800055C82C /* RecordedPeriodeViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB661BF287F41800055C82C /* RecordedPeriodeViewParam.swift */; };
 		4AC04D61287E382900E6822F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D5F287E382900E6822F /* RecordTableViewCell.swift */; };
 		4AC04D62287E382900E6822F /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC04D60287E382900E6822F /* RecordTableViewCell.xib */; };
 		4AC04D64287E3DB900E6822F /* BarChatView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D63287E3DB900E6822F /* BarChatView+Extension.swift */; };
@@ -47,10 +48,16 @@
 		4AC04D6A287E404400E6822F /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */; };
 		4AC04D6C287E657500E6822F /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D6B287E657500E6822F /* DashboardInteractor.swift */; };
 		4AC04D6E287E731D00E6822F /* DashboardInteracorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D6D287E731D00E6822F /* DashboardInteracorTest.swift */; };
+		4AC04D70287E7E4400E6822F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D6F287E7E4400E6822F /* DashboardViewModel.swift */; };
+		4AC04D72287E7FCC00E6822F /* PieChartViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D71287E7FCC00E6822F /* PieChartViewParam.swift */; };
+		4AC04D74287E923E00E6822F /* BarChartViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC04D73287E923E00E6822F /* BarChartViewParam.swift */; };
 		4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */; };
 		4AC53B62287BB716003703D7 /* SettingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */; };
 		4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */; };
 		4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */; };
+		4AE98D82287F18C600108E76 /* DashboardViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE98D81287F18C600108E76 /* DashboardViewModelTest.swift */; };
+		4AE98D84287F195D00108E76 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE98D83287F195D00108E76 /* XCTestCase+Extension.swift */; };
+		4AE98D86287F19CB00108E76 /* DashboardInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE98D85287F19CB00108E76 /* DashboardInteractorMock.swift */; };
 		4AF72898287D3F950063EA53 /* AddRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */; };
 		4AF7289A287D439C0063EA53 /* AddRecordInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */; };
 		4AF7289C287D46C20063EA53 /* RecordStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */; };
@@ -120,6 +127,7 @@
 		4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRaw.swift; sourceTree = "<group>"; };
 		4AB100DF287CF61B009E3E63 /* RealmCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCreator.swift; sourceTree = "<group>"; };
 		4AB100E1287CFAD5009E3E63 /* RecordStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageTest.swift; sourceTree = "<group>"; };
+		4AB661BF287F41800055C82C /* RecordedPeriodeViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedPeriodeViewParam.swift; sourceTree = "<group>"; };
 		4AC04D5F287E382900E6822F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		4AC04D60287E382900E6822F /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
 		4AC04D63287E3DB900E6822F /* BarChatView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarChatView+Extension.swift"; sourceTree = "<group>"; };
@@ -128,10 +136,16 @@
 		4AC04D69287E404400E6822F /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		4AC04D6B287E657500E6822F /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
 		4AC04D6D287E731D00E6822F /* DashboardInteracorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteracorTest.swift; sourceTree = "<group>"; };
+		4AC04D6F287E7E4400E6822F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		4AC04D71287E7FCC00E6822F /* PieChartViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewParam.swift; sourceTree = "<group>"; };
+		4AC04D73287E923E00E6822F /* BarChartViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewParam.swift; sourceTree = "<group>"; };
 		4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		4AC53B61287BB716003703D7 /* SettingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorTest.swift; sourceTree = "<group>"; };
 		4AC53B64287BBA7B003703D7 /* SettingStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStorageMock.swift; sourceTree = "<group>"; };
 		4AC53B69287BBF40003703D7 /* SettingInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractorImpl.swift; sourceTree = "<group>"; };
+		4AE98D81287F18C600108E76 /* DashboardViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTest.swift; sourceTree = "<group>"; };
+		4AE98D83287F195D00108E76 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
+		4AE98D85287F19CB00108E76 /* DashboardInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractorMock.swift; sourceTree = "<group>"; };
 		4AF72897287D3F950063EA53 /* AddRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordInteractor.swift; sourceTree = "<group>"; };
 		4AF72899287D439C0063EA53 /* AddRecordInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordInteractorTest.swift; sourceTree = "<group>"; };
 		4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageMock.swift; sourceTree = "<group>"; };
@@ -237,6 +251,7 @@
 				4AA300F1287AF53400901832 /* WelcomePageViewModel.swift */,
 				4AC53B5E287BA604003703D7 /* SettingPageViewModel.swift */,
 				4AF7289D287D90530063EA53 /* AddRecordViewModel.swift */,
+				4AC04D6F287E7E4400E6822F /* DashboardViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 				4AA300F5287B04A300901832 /* WelcomePageViewModelTest.swift */,
 				4AAAB140287BEA73008E0A5D /* SettingPageViewModelTest.swift */,
 				4AF728A7287DB86D0063EA53 /* AddRecordViewModelTest.swift */,
+				4AE98D81287F18C600108E76 /* DashboardViewModelTest.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 				4AA300ED287AEC0F00901832 /* adapter */,
 				4AAF7A16287A5E2C00B9D9BC /* personaltrackerTests.swift */,
 				4AA300F8287B0E9600901832 /* RxSignalTestHelper.swift */,
+				4AE98D83287F195D00108E76 /* XCTestCase+Extension.swift */,
 			);
 			path = personaltrackerTests;
 			sourceTree = "<group>";
@@ -322,6 +339,9 @@
 				4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */,
 				4AF7289F287D92170063EA53 /* RecordViewParam.swift */,
 				4AF728A1287D93D40063EA53 /* CategoryViewParam.swift */,
+				4AC04D71287E7FCC00E6822F /* PieChartViewParam.swift */,
+				4AC04D73287E923E00E6822F /* BarChartViewParam.swift */,
+				4AB661BF287F41800055C82C /* RecordedPeriodeViewParam.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -355,6 +375,7 @@
 				4A038531287C571700AD5E37 /* SettingInteractorMock.swift */,
 				4AF7289B287D46C20063EA53 /* RecordStorageMock.swift */,
 				4AF728A9287DC63E0063EA53 /* AddRecordInteractorMock.swift */,
+				4AE98D85287F19CB00108E76 /* DashboardInteractorMock.swift */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -658,6 +679,7 @@
 				4AC53B5F287BA604003703D7 /* SettingPageViewModel.swift in Sources */,
 				4AC04D61287E382900E6822F /* RecordTableViewCell.swift in Sources */,
 				4AC04D64287E3DB900E6822F /* BarChatView+Extension.swift in Sources */,
+				4AC04D70287E7E4400E6822F /* DashboardViewModel.swift in Sources */,
 				4AF728A2287D93D40063EA53 /* CategoryViewParam.swift in Sources */,
 				4AF72898287D3F950063EA53 /* AddRecordInteractor.swift in Sources */,
 				4A03853D287C794900AD5E37 /* AddDataViewController.swift in Sources */,
@@ -667,12 +689,15 @@
 				4A038536287C6D3A00AD5E37 /* CategoryCollectionViewCell.swift in Sources */,
 				4AC04D6A287E404400E6822F /* UIStoryboard+Extension.swift in Sources */,
 				4AA300F4287B035F00901832 /* SwinjectAdapter.swift in Sources */,
+				4AC04D74287E923E00E6822F /* BarChartViewParam.swift in Sources */,
 				4AAF7A02287A5E2A00B9D9BC /* SceneDelegate.swift in Sources */,
 				4AB100E0287CF61B009E3E63 /* RealmCreator.swift in Sources */,
 				4A038540287C823000AD5E37 /* UIImage+Extension.swift in Sources */,
+				4AB661C0287F41800055C82C /* RecordedPeriodeViewParam.swift in Sources */,
 				4AA5EC4F287B2B1100534289 /* SwinjectViewModel.swift in Sources */,
 				4AC04D68287E3F4B00E6822F /* PieChartView+Extension.swift in Sources */,
 				4AF728A0287D92170063EA53 /* RecordViewParam.swift in Sources */,
+				4AC04D72287E7FCC00E6822F /* PieChartViewParam.swift in Sources */,
 				4AF728A4287DA0240063EA53 /* DashboardViewController.swift in Sources */,
 				4AC53B6A287BBF40003703D7 /* SettingInteractorImpl.swift in Sources */,
 				4AB100DE287CF5D1009E3E63 /* RecordRaw.swift in Sources */,
@@ -693,11 +718,14 @@
 				4AF7289A287D439C0063EA53 /* AddRecordInteractorTest.swift in Sources */,
 				4AB100E2287CFAD5009E3E63 /* RecordStorageTest.swift in Sources */,
 				4AF728A8287DB86D0063EA53 /* AddRecordViewModelTest.swift in Sources */,
+				4AE98D84287F195D00108E76 /* XCTestCase+Extension.swift in Sources */,
 				4A038532287C571700AD5E37 /* SettingInteractorMock.swift in Sources */,
 				4AF728AA287DC63E0063EA53 /* AddRecordInteractorMock.swift in Sources */,
+				4AE98D82287F18C600108E76 /* DashboardViewModelTest.swift in Sources */,
 				4AA300F6287B04A300901832 /* WelcomePageViewModelTest.swift in Sources */,
 				4AAAB141287BEA73008E0A5D /* SettingPageViewModelTest.swift in Sources */,
 				4AAF7A17287A5E2C00B9D9BC /* personaltrackerTests.swift in Sources */,
+				4AE98D86287F19CB00108E76 /* DashboardInteractorMock.swift in Sources */,
 				4AA300F9287B0E9600901832 /* RxSignalTestHelper.swift in Sources */,
 				4AC53B65287BBA7B003703D7 /* SettingStorageMock.swift in Sources */,
 				4AF7289C287D46C20063EA53 /* RecordStorageMock.swift in Sources */,

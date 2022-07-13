@@ -19,6 +19,7 @@ class AddDataViewController: UIViewController {
     
     var viewModel: AddRecordViewModel!
     var type: RecordType = .expense
+    var onSuccess: () -> Void = { }
     
     private let disposeBag = DisposeBag()
     
@@ -62,6 +63,7 @@ class AddDataViewController: UIViewController {
             case .updateCategory:
                 self.categoryCollectionView.reloadData()
             case .showSuccess:
+                self.onSuccess()
                 self.dismiss(animated: true)
             case .showError(let message):
                 self.showError(message: message)

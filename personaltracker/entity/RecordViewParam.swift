@@ -16,3 +16,13 @@ struct RecordViewParam {
     let imageId: String
     let createdAt: Int
 }
+
+struct RecordCellViewParam: Equatable{
+    let uid: String
+    let title: String
+    let category: String
+    let type: String
+    let amount: Int
+    let createdAt: Int
+    let formattedDate: String
+}
