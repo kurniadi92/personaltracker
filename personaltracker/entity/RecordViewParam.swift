@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecordViewParam {
+struct RecordViewParam: Equatable {
     let uid: String
     let title: String
     let category: String

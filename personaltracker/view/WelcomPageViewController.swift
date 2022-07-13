@@ -28,11 +28,12 @@ class WelcomPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupSignal()
+        
+        viewModel.viewLoad()        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.viewLoad()
     }
     
     private func setupSignal() {

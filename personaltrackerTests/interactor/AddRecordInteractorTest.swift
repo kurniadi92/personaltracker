@@ -30,7 +30,15 @@ class AddRecordInteractorTest: XCTestCase {
     }
 
     func testSave_shouldStore_rawData() {
-        let result = try! interactor.save(title: "mock", amount: 0, category: "category", type: "type", imageId: "id").toBlocking().first()
+        let result = try! interactor.save(uuid: "uuid", title: "mock", amount: 0, category: "category", type: "type", imageId: "id").toBlocking().first()
+        
+        let expected = try! recordStorage.get(uid: "uuid").toBlocking().first()
+        
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testSave_witUUIDNil_shouldStillStore_rawData() {
+        let result = try! interactor.save(uuid: nil, title: "mock", amount: 0, category: "category", type: "type", imageId: "id").toBlocking().first()
         
         let expected = try! recordStorage.get(uid: "uuid").toBlocking().first()
         
@@ -38,7 +46,7 @@ class AddRecordInteractorTest: XCTestCase {
     }
     
     func testGet_shouldRetrieve_record() {
-        let result = try! interactor.save(title: "mock", amount: 0, category: "category", type: "type", imageId: "id").toBlocking().first()
+        let result = try! interactor.save(uuid: "uuid", title: "mock", amount: 0, category: "category", type: "type", imageId: "id").toBlocking().first()
         
         let expected = try! interactor.get(uid: "uuid").toBlocking().first()
         

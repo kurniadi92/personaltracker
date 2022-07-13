@@ -29,7 +29,7 @@ extension UIImage {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         if let path = paths.first {
             let imageURL = URL(fileURLWithPath: path).appendingPathComponent(imageName)
-            let data = try! Data(contentsOf: imageURL)
+            guard let data = try? Data(contentsOf: imageURL) else { return nil }
             if let image = UIImage(data: data) {
                 return image
             }

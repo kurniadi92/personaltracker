@@ -11,9 +11,10 @@ import RealmSwift
 
 protocol RecordStorage {
     func getAll() -> Single<[Record]>
-    func get(uid: String) -> Single<Record>
+    func get(uid: String) -> Single<Record?>
     func save(data: RecordRaw) -> Single<Record>
     func getByRange(start: Int, end: Int) -> Single<[Record]>
+    func delete(uid: String) -> Single<Void>
 }
 
 class RecordStorageImpl: RecordStorage {
@@ -34,18 +35,36 @@ class RecordStorageImpl: RecordStorage {
         }
     }
     
-    func get(uid: String) -> Single<Record> {
-        return Single<Record>.deferred { [weak self] in
+    func get(uid: String) -> Single<Record?> {
+        return Single<Record?>.deferred { [weak self] in
             guard let `self` = self, let realm = self.realm() else {
                 return .error(NSError(domain: "Failed to initialize realm", code: 0))
             }
             
             let record = realm.objects(Record.self).first { $0.uid == uid }
-            
             if let record = record {
                 return .just(record)
             } else {
-                return .error(NSError(domain: "No record found", code: 1))
+                return .just(nil)
+            }
+        }
+    }
+    
+    func delete(uid: String) -> Single<Void> {
+        return get(uid: uid).flatMap { record -> Single<Void> in
+            return Single<Void>.deferred { [weak self] in
+                guard let `self` = self, let realm = self.realm(), let record = record else {
+                    return .error(NSError(domain: "Failed to initialize realm", code: 0))
+                }
+                
+                do {
+                    try realm.write {
+                        realm.delete(record)
+                    }
+                    return .just(())
+                } catch {
+                    return .error(error)
+                }
             }
         }
     }

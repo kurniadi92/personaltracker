@@ -85,6 +85,7 @@ class WelcomePageViewModelTest: XCTestCase {
         
         wait {
             XCTAssertEqual(self.testHelper.values, [.goToMainPage])
+            XCTAssertEqual(storageMock.getResetDay(), 1)
             XCTAssertEqual(storageMock.getName(), "random")
         }
     }

@@ -37,6 +37,24 @@ class RecordStorageTest: XCTestCase {
         XCTAssertEqual(record, expectedRecord!)
     }
     
+    func testCreateAndDeleteRecord() {
+        let storage = RecordStorageImpl(realm: self.realm)
+        let recordRaw = RecordRaw(
+            uid: "uuid",
+            title: "mock",
+            category: "category",
+            type: "type",
+            amount: 100,
+            imageId: "location"
+        )
+         
+        let record = try! storage.save(data: recordRaw).toBlocking().first()
+        let delete = try! storage.delete(uid: "uuid").toBlocking().first()
+                
+        let count = realm().objects(Record.self).filter { $0.uid == "uuid" }.count
+        XCTAssertEqual(0, count)
+    }
+    
     func testCreateAndGetAllRecord() {
         let storage = RecordStorageImpl(realm: self.realm)
         let recordRaw = RecordRaw(

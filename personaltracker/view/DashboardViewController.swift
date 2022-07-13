@@ -198,4 +198,15 @@ extension DashboardViewController: UITableViewDataSource {
     }
 }
 
-extension DashboardViewController: UITableViewDelegate { }
+extension DashboardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let expense = UIStoryboard.createViewController(vc: AddDataViewController.self) else { return }
+        expense.type = .undefined
+        expense.action = .edit(uuid: viewModel.getItem(for: indexPath.row).uid)
+        expense.onSuccess = { [weak self] in
+            self?.viewModel.viewLoad()
+        }
+        
+        present(expense, animated: true)
+    }
+}

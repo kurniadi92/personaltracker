@@ -19,7 +19,10 @@ class AddDataViewController: UIViewController {
     
     var viewModel: AddRecordViewModel!
     var type: RecordType = .expense
+    var action: Action = .add
     var onSuccess: () -> Void = { }
+    
+    @IBOutlet var deleteButton: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -35,7 +38,7 @@ class AddDataViewController: UIViewController {
         
         setupSignal()
         
-        viewModel.viewLoad(type: type)
+        viewModel.viewLoad(type: type, action: action)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onViewTap))
         tapGesture.cancelsTouchesInView = false
@@ -67,8 +70,39 @@ class AddDataViewController: UIViewController {
                 self.dismiss(animated: true)
             case .showError(let message):
                 self.showError(message: message)
+            case .setEditAppeareance(let viewParam):
+                self.deleteButton.isHidden = false
+                self.titleTextField.text = viewParam.title
+                self.amountTextField.text = viewParam.amount.description
+                guard let image = UIImage().fetchImage(with: viewParam.imageId) else {
+                    return
+                }
+                self.setImageView(image: image)
+            case .showDeleteConfirmation:
+                let alert = UIAlertController(title: "Attention", message: "Do you want to delete this ?", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .destructive) { [weak self] _  in
+                    self?.viewModel.confirmDelete()
+                }
+                
+                let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                alert.addAction(action)
+                alert.addAction(cancel)
+                
+                self.present(alert, animated: true)
             }
         }.disposed(by: disposeBag)
+    }
+    
+    @IBAction func deleteButtoTap(_ sender: Any) {
+        viewModel.tapDelete()
+    }
+    
+    private func setImageView(image: UIImage) {
+        guard let url = image.saveToDocuments(filename: Int(Date().timeIntervalSince1970).description) else {
+            return
+        }
+        imageView.image = try! UIImage(data: Data(contentsOf: url))
+        viewModel.setImage(url: url)
     }
     
     @IBAction func imageTap(_ sender: Any) {

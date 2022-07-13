@@ -9,8 +9,9 @@ import Foundation
 import RxSwift
 
 protocol AddRecordInteractor {
-    func get(uid: String) -> Single<Record>
-    func save(title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record>
+    func get(uid: String) -> Single<Record?>
+    func delete(uid: String) -> Single<Void>
+    func save(uuid: String?, title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record>
     func getExpenseCategory() -> [String]
     func getIncomeCategory() -> [String]
 }
@@ -22,12 +23,17 @@ class AddRecordInteractorImpl: AddRecordInteractor {
         self.recordStorage = recordStorage
     }
     
-    func get(uid: String) -> Single<Record> {
+    func get(uid: String) -> Single<Record?> {
         return recordStorage.get(uid: uid)
     }
     
-    func save(title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
-        let raw = RecordRaw(uid: UUID().uuidString, title: title, category: category, type: type, amount: amount, imageId: imageId)
+    func delete(uid: String) -> Single<Void> {
+        return recordStorage.delete(uid: uid)
+    }
+    
+    func save(uuid: String?, title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
+        let uuidValid = uuid ?? UUID().uuidString
+        let raw = RecordRaw(uid: uuidValid, title: title, category: category, type: type, amount: amount, imageId: imageId)
         
         return recordStorage.save(data: raw)
     }

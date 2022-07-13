@@ -26,8 +26,21 @@ class AddRecordViewModelTest: XCTestCase {
         testHelper.observeValue(observable: viewModel.event)
     }
     
+    func testViewLoad_withEditAction_shouldSetAppearance() {
+        viewModel.viewLoad(type: .undefined, action: .edit(uuid: "uuid"))
+        
+        wait {
+            XCTAssertEqual(self.testHelper.values, [
+                .setExpenseAppeareance,
+                .updateCategory,
+                .setEditAppeareance(viewParam: RecordViewParam(uid: "uuid", title: "mock", category: "FnB", type: "expense", amount: 0, imageId: "mock", createdAt: 0)),
+                .updateCategory
+            ])
+        }
+    }
+    
     func testViewLoad_withExpenseType_shouldSetExpenseAppearance() {
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         
         wait {
             XCTAssertEqual(self.testHelper.values, [
@@ -38,7 +51,7 @@ class AddRecordViewModelTest: XCTestCase {
     }
     
     func testViewLoad_withIncomeType_shouldSetIncomeAppearance() {
-        viewModel.viewLoad(type: .income)
+        viewModel.viewLoad(type: .income, action: .add)
         
         wait {
             XCTAssertEqual(self.testHelper.values, [
@@ -50,36 +63,36 @@ class AddRecordViewModelTest: XCTestCase {
     
     
     func testGetCategory_shouldReturnCategoryViewParam() {
-        viewModel.viewLoad(type: .income)
+        viewModel.viewLoad(type: .income, action: .add)
         let defaultCategory = CategoryViewParam(name: "General")
         defaultCategory.isSelected = true
         
         XCTAssertEqual(viewModel.category(index: 0),defaultCategory)
         XCTAssertEqual(viewModel.category(index: 1), CategoryViewParam(name: "three"))
         
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         XCTAssertEqual(viewModel.category(index: 0),defaultCategory)
         XCTAssertEqual(viewModel.category(index: 1), CategoryViewParam(name: "one"))
     }
     
     func testGetItemSize_shouldReturnCalculatedSizeForCell() {
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         XCTAssertEqual(viewModel.itemSize(index: 1), CGSize(width: 33, height: 42))
         
-        viewModel.viewLoad(type: .income)
+        viewModel.viewLoad(type: .income, action: .add)
         XCTAssertEqual(viewModel.itemSize(index: 1), CGSize(width: 39, height: 42))
     }
     
     func testCategoryCount_shouldReturn_categoriesCount() {
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         XCTAssertEqual(viewModel.categoryCount, 3)
         
-        viewModel.viewLoad(type: .income)
+        viewModel.viewLoad(type: .income, action: .add)
         XCTAssertEqual(viewModel.categoryCount, 4)
     }
     
     func testSelectCategory_shouldUpdateSelected_toTrue() {
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         testHelper.reset()
         
         viewModel.selectCategory(index: 1)
@@ -100,7 +113,7 @@ class AddRecordViewModelTest: XCTestCase {
         viewModel = AddRecordViewModelImpl(addRecordInteractor: interactor)
         testHelper.observeValue(observable: viewModel.event)
 
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         testHelper.reset()
         
         viewModel.setImage(url: URL(fileURLWithPath: "file:///Documents/1657633385"))
@@ -124,7 +137,7 @@ class AddRecordViewModelTest: XCTestCase {
         viewModel = AddRecordViewModelImpl(addRecordInteractor: interactor)
         testHelper.observeValue(observable: viewModel.event)
 
-        viewModel.viewLoad(type: .expense)
+        viewModel.viewLoad(type: .expense, action: .add)
         testHelper.reset()
                 
         viewModel.save(title: nil, amount: 100)

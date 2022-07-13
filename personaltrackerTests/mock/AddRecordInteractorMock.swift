@@ -11,16 +11,23 @@ import RxSwift
 @testable import personaltracker
 
 class AddRecordInteractorMock: AddRecordInteractor {
-    var record: Record!
     
-    func get(uid: String) -> Single<Record> {
-        record = Record(uid: uid, title: "mock", category: "mock", type: "mock", amount: 0, imageId: "mock", createdAt: 0)
+    var record: Record!
+    var deletedUid: String = ""
+    
+    func delete(uid: String) -> Single<Void> {
+        deletedUid =  uid
+        return .just(())
+    }
+    
+    func get(uid: String) -> Single<Record?> {
+        record = Record(uid: uid, title: "mock", category: "FnB", type: "expense", amount: 0, imageId: "mock", createdAt: 0)
         
         return .just(record)
     }
 
-    func save(title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
-        record = Record(uid: "uid", title: title, category: category, type: type, amount: amount, imageId: imageId, createdAt: 0)
+    func save(uuid: String?, title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
+        record = Record(uid: uuid ?? "uid", title: title, category: category, type: type, amount: amount, imageId: imageId, createdAt: 0)
         
         return .just(record)
     }
@@ -35,7 +42,7 @@ class AddRecordInteractorMock: AddRecordInteractor {
 }
 
 class AddRecordInteractorErrorMock: AddRecordInteractorMock {
-    override func save(title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
+    override func save(uuid: String?,  title: String, amount: Int, category: String, type: String, imageId: String) -> Single<Record> {
         return .error(RxError.unknown)
     }
 }

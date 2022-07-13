@@ -11,7 +11,6 @@ import RxSwift
 @testable import personaltracker
 
 class RecordStorageMock: RecordStorage {
-    
     private var record: Record!
     
     private var records = [Record]()
@@ -28,7 +27,7 @@ class RecordStorageMock: RecordStorage {
         return Single.just(records)
     }
     
-    func get(uid: String) -> Single<Record> {
+    func get(uid: String) -> Single<Record?> {
         return Single.just(record)
     }
     
@@ -36,5 +35,9 @@ class RecordStorageMock: RecordStorage {
         record = Record(uid: "uuid", title: data.title, category: data.category, type: data.type, amount: data.amount, imageId: data.imageId, createdAt: 0)
         
         return Single.just(record)
+    }
+    
+    func delete(uid: String) -> Single<Void> {
+        return Single.just(())
     }
 }
