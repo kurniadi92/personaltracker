@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4AAF79FB287A5E2A00B9D9BC"
-               BuildableName = "personaltracker.app"
+               BuildableName = "Personal Tracker.app"
                BlueprintName = "personaltracker"
                ReferencedContainer = "container:personaltracker.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AAF79FB287A5E2A00B9D9BC"
-            BuildableName = "personaltracker.app"
+            BuildableName = "Personal Tracker.app"
             BlueprintName = "personaltracker"
             ReferencedContainer = "container:personaltracker.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AAF79FB287A5E2A00B9D9BC"
-            BuildableName = "personaltracker.app"
+            BuildableName = "Personal Tracker.app"
             BlueprintName = "personaltracker"
             ReferencedContainer = "container:personaltracker.xcodeproj">
          </BuildableReference>
