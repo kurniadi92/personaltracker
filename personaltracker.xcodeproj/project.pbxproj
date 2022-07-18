@@ -339,9 +339,9 @@
 				4AB100DD287CF5D1009E3E63 /* RecordRaw.swift */,
 				4AF7289F287D92170063EA53 /* RecordViewParam.swift */,
 				4AF728A1287D93D40063EA53 /* CategoryViewParam.swift */,
-				4AC04D71287E7FCC00E6822F /* PieChartViewParam.swift */,
 				4AC04D73287E923E00E6822F /* BarChartViewParam.swift */,
 				4AB661BF287F41800055C82C /* RecordedPeriodeViewParam.swift */,
+				4AC04D71287E7FCC00E6822F /* PieChartViewParam.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";

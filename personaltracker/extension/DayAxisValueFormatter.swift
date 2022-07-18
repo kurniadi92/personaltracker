@@ -16,6 +16,12 @@ public class DayAxisValueFormatter: NSObject, AxisValueFormatter {
     }
     
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return day[Int(value - 1)].description
+        let day = day.first { $0 == Int(value) }
+        
+        if let dayUnwrap = day {
+            return dayUnwrap.description
+        } else {
+            return ""
+        }
     }
 }
